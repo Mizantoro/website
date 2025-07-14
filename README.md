@@ -12,7 +12,6 @@ You can access them here:
 ## Contact
 
 If you have any questions or suggestions, feel free to reach out via contact methods provided on the website.
-Keep in mind I am not a big fun of web programming, and this website is just a side project I made 4fun and out of bordom.
 
 ## Note
 
