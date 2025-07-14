@@ -52,7 +52,7 @@ $(document).ready(function () {
 });
 
 window.onload = function (){
-	if (Math.floor(Math.random() * 50) === 0) { // https://www.w3schools.com/JS/js_random.asp
+	if (Math.floor(Math.random() * 50) === 0) {
 		toggleDiv('taskbar');
 		toggleDiv('program_loader_background');
 		toggleDiv('file_list_background');
