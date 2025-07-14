@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<title>MizantOS</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="media/pictures/Meta/favicon.ico" type="image/x-icon">
+	<meta charset="UTF-8">
+</head>
+<body>
+	<!-- SCP AUDIO -->
+	<audio class="scp_096_audio" id="scp_096_audio">
+		<source src="media/audio/SCP-096Scream.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="scp_096_audio" id="glass_breaking_audio">
+		<source src="media/audio/glass_breaking.mp3" type="audio/mpeg">
+	</audio>
+
+	<!-- SCREEN OFF -->
+	<div class="dark_screen" id="dark_screen"></div>
+
+	<!-- BROKEN GLASS -->
+	<img src="media/pictures/BrokenGlass/broken_glass0.png" class="broken_glass" id="broken_glass">
+
+	<!-- RED SCREEN OF DEATH -->
+	<div class="red_screen_of_death" id="red_screen_of_death">
+		<h1 style="color: white;">&#x2022;&#x60;&#x5f;&#xb4;&#x2022;</h1>
+		<h1 style="color: white;">Fuck You</h1>
+		<p class="red_screen_of_death_paragraph" style="color: white;">
+			The operating system has not run into any issues. <br>
+			It just decided to make your life harder you fuck. <br>
+			Click the reboot button to return to normal.
+		</p>
+		<button class="red_screen_of_death_button" id="red_screen_of_death_button" onclick="rickRoll()">Reboot</button>
+	</div>
+
+	<!-- RED SCREEN OF DEATH RICK ROLL -->
+	<div class="red_screen_of_death_rick_roll_background" id="red_screen_of_death_rick_roll_background">
+		<div class="red_screen_of_death_rick_roll_title_bar">The operating system will reboot after the video is finished.</div>
+		<div class="red_screen_of_death_rick_roll_content">
+			<video class="red_screen_of_death_rick_roll_video" id="rick_roll" width="400px">
+				<source src="media/videos/RickRoll.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+
+	<!-- TASK BAR -->
+	<div class="taskbar" id="taskbar">
+		<button class="button_start" onclick="toggleDiv('start_menu')">Start</button>
+		<button class="button_app_opened" id="file_list_taskbar" onclick="toggleDiv('file_list_background')">File Looker</button>
+		<button class="button_app_opened" id="program_loader_taskbar" onclick="toggleDiv('program_loader_background')">Program Loader</button>
+		<button class="button_app_opened" id="about_start_menu_taskbar" onclick="toggleDiv('about_start_menu_background')">About</button>
+		<button class="button_app_opened" id="social_media_list_taskbar" onclick="toggleDiv('social_media_list_background')">Social_Media_List.txt</button>
+		<button class="button_app_opened" id="social_media_list_help_taskbar" onclick="toggleDiv('writerpad_5000_help_background')">About WritePad 5000</button>
+		<button class="button_app_opened" id="do_not_open_image_taskbar" onclick="toggleDiv('do_not_open_image_background')">DO_NOT_OPEN.jpeg</button>
+		<button class="button_app_opened" id="eas_taskbar">AUTO EAS SYSTEM</button>
+		<button class="button_app_opened" id="internet_exploder_window_taskbar" onclick="toggleDiv('Internet_Exploder')">Internet_Exploder.exe</button>
+		<button class="button_app_opened" id="system_customization_taskbar" onclick="toggleDiv('system_customization_background')">System_Customization</button>
+	</div>
+
+	<!-- START MENU -->
+	<div class="start_menu_background" id="start_menu">
+		<div class="window_content">
+			<div class="profile_info">
+				<img class="profile_picture" src="media/pictures/StartMenu/ProfilePicture/profile_picture.jpg">
+	    			<div class="profile_text">
+	     				<p class="profile_logged_text">Logged in as:</p>
+	      				<p class="profile_idiot_text">Fucking Idiot</p>
+	   				</div>
+			</div>
+			<div class="list_of_programs_background">
+				<button class="list_of_programs_button" onclick="toggleDiv('file_list_background'); toggleDiv('file_list_taskbar'); toggleDiv('start_menu')">File Looker</button>
+				<button class="list_of_programs_button" onclick="toggleDiv('program_loader_background'); toggleDiv('program_loader_taskbar'); toggleDiv('start_menu')">Program Loader</button>
+			</div>
+			<button class="start_menu_about_button" onclick="toggleDiv('about_start_menu_background'); toggleDiv('about_start_menu_taskbar'); toggleDiv('start_menu')">About</button>
+		</div>
+	</div>
+
+	<!-- START MENU ABOUT WINDOW -->
+	<div class="about_start_menu_background" id="about_start_menu_background">
+		<div class="about_start_menu_title_bar">
+			About
+			<button class="button_close" onclick="toggleDiv('about_start_menu_background'); toggleDiv('about_start_menu_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('about_start_menu_background')">&#45;</button>
+		</div>
+		<div class="about_start_menu_content">
+			<h1 class="about_start_menu_header">Hi, my name is Mizantoro and Welcome to MizantOS!</h1>
+			<p> <br>
+				This website serves as somewhat of a portfolio and a hub for all my profiles
+				(which you can see by clicking <a onclick="toggleDiv('social_media_list_background'); toggleDiv('social_media_list_taskbar')">here</a>)
+				with some fun tweaks to play around with and a bunch of easter eggs I encourage you to find! ;)
+				<br><br>
+				Since some people call me a programming masochist, this entire website is written in pure HTML, CSS and JavaScript,
+				with a little bit of help from the jQuery library.
+				<br><br>
+				If you're feeling a bit too sane, and want to explore through the madness of site's code
+				feel free to visit this <a href="https://github.com/Mizantoro/website" target="_blank">GitHub repo</a>.
+			</p>
+		</div>
+	</div>
+
+	<!-- FILE LOOKER -->
+	<div class="file_list_background" id="file_list_background">
+		<div class="file_list_title_bar">
+			File Looker
+			<button class="button_close" onclick="toggleDiv('file_list_background'); toggleDiv('file_list_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('file_list_background')">&#45;</button>
+		</div>
+		<div class="file_list_content">
+			<button class="file_list_button" onclick="toggleDiv('social_media_list_background'); toggleDiv('social_media_list_taskbar')"><img src="media/pictures/StartMenu/AppIcons/social_media.ico" class="file_list_icon">Social_Media_List.txt</button>
+			<button class="file_list_button" onclick="SCP(); toggleDiv('do_not_open_image_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Painting.ico" class="file_list_icon">DO_NOT_OPEN.jpeg</button>
+		</div>
+	</div>
+
+	<!-- PROGRAM LOADER -->
+	<div class="file_list_background" id="program_loader_background">
+		<div class="file_list_title_bar">
+			Program Loader
+			<button class="button_close" onclick="toggleDiv('program_loader_background'); toggleDiv('program_loader_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('program_loader_background')">&#45;</button>
+		</div>
+		<div class="file_list_content">
+			<button class="file_list_button" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Night_on_computer.ico" class="file_list_icon">System_Customization</button>
+			<button class="file_list_button" onclick="toggleDiv('Internet_Exploder'); toggleDiv('internet_exploder_window_taskbar')"><img src="media/pictures/StartMenu/AppIcons/internet_exploder_icon.png" class="file_list_icon">Internet_Exploder.exe</button>
+		</div>
+	</div>
+
+	<!-- INTERNET EXPLODER --> 
+	<div class="internet_exploder_window_background" id="Internet_Exploder">
+		<div class="internet_exploder_title_bar">
+			Internet_Exploder.exe <button class="button_close" onclick="toggleDiv('Internet_Exploder'); toggleDiv('internet_exploder_window_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('Internet_Exploder')">&#45;</button>
+		</div>
+		<div class="internet_exploder_window_content">
+			<img class="image_map" id="explode_da_internet_map" src="media/pictures/InternetExploder/earth_lights_0.png">
+			<button class="explode_da_internet_button" id="explode_da_internet_button" onclick="toggleDiv('internet_exploder_warning')">Explode da internet</button>
+		</div>
+	</div>
+
+	<!-- INTERNET EXPLODER WARNING --> 
+	<div class="explode_da_internet_warning_window_background" id="internet_exploder_warning">
+		<div class="internet_exploder_warning_title_bar">
+			Warning <div class="button_close">&#x2715;</div>
+		</div>
+	<div class="internet_exploder_window_warning_content">
+		<p class="warning_text">This action will detroy da internet! This means no more feet pics!<br>Are you sure you want to proceed?</p>
+		<button class="warning_button_yes" onclick="ExplodeDaInternet(); toggleDiv('internet_exploder_warning')">Yes</button>
+		<button class="warning_button_no" onclick="toggleDiv('internet_exploder_warning')">No</button>
+	</div>
+</div>
+
+	<!-- INTERNET HAS BEEN EXPLODED -->
+	<div class="explode_da_internet_warning_window_background" id="internet_has_been_exploded">
+		<div class="internet_exploder_warning_title_bar">
+			Action successful <div class="button_close">&#x2715;</div>
+		</div>
+		<div class="internet_exploder_window_warning_content">
+			<p class="warning_text">Da internet has been exploded!</p>
+			<button class="internet_has_been_exploded_button_ok" onclick="toggleDiv('internet_has_been_exploded')">Ok.</button>
+		</div>
+	</div>
+
+	<!-- SOCIAL MEDIA LIST -->
+	<div class="social_media_list_background" id="social_media_list_background">
+		<div class="social_media_list_title_bar">
+			Social_Media_List.txt - WritePad 5000
+			<button class="button_close" onclick="toggleDiv('social_media_list_background'); toggleDiv('social_media_list_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('social_media_list_background')">&#45;</button>
+		</div>
+		<div class="social_media_list_toolbar">
+			<button class="social_media_list_toolbar_button" onclick="toggleDiv('writerpad_5000_help_background'); toggleDiv('social_media_list_help_taskbar')">Help</button>
+			The file is read only!
+		</div>
+		<div class="social_media_list_content">
+			<h2>Check out my social / gaming profiles:</h2>
+			<a href="https://steamcommunity.com/id/mizantoro" target="_blank">Steam</a> <br>
+			<a href="https://www.reddit.com/user/Mizantoro/" target="_blank">Reddit</a> <br>
+			<a href="https://github.com/Mizantoro" target="_blank">GitHub</a> <br>
+			<a href="https://x.com/Mizantoro" target="_blank">Hail Musk</a> <br>
+			<a href="https://www.youtube.com/channel/UCIMM_Ui9_5VnLLPzcD3opXQ" target="_blank">YouTube</a> <br>
+			<a href="https://www.twitch.tv/mizantoro" target="_blank">Twitch</a> <br>
+			<a href="https://www.instagram.com/mizantoro/" target="_blank">Instagram</a> <br>
+			<a href="https://open.spotify.com/user/31f5wynu6egsu7afi3idbe3gnchu" target="_blank">Spotify</a> <br>
+			<a href="https://www.speedrun.com/users/Mizantoro" target="_blank">Speedrun</a> <br>
+			<a href="https://socialclub.rockstargames.com/member/Mizantoro/" target="_blank">Rockstar Social Club</a> <br>
+			<a href="https://forum.thewingedhussars.com/member.php?action=profile&uid=3777" target="_blank">The Winged Hussars</a> <br>
+			<a href="https://www.faceit.com/en/players/Mizantoro" target="_blank">Faceit</a> <br>
+			<a href="https://hypixel.net/members/mizantoro.5484378/" target="_blank">Hypixel Forum</a> | <a href="https://hypixel.net/player/Mizantoro" target="_blank">Player Stats</a> <br><br>
+			<p>You can e-mail me: <a href="mailto:mizantoro@duck.com">mizantoro@duck.com</a></p> <br>
+			<p>You can always find my profiles by seraching for "mizantoro". If you want to contact me you can text me on any of the sites listed, but texting me on Steam or Discord will most likely result in me seeing your message.</p>
+		</div>
+		<div class="social_media_list_file_destination">
+			<p>A:>Users:>FuckingIdiot:>PersonalFiles:>Social_Media_List.txt</p>
+		</div>
+	</div>
+
+	<!-- NOTEPAD 5000 HELP -->
+	<div class="writerpad_5000_help_background" id="writerpad_5000_help_background">
+		<div class="writerpad_5000_help_title_bar">
+			About WritePad 5000
+			<button class="button_close" onclick="toggleDiv('writerpad_5000_help_background'); toggleDiv('social_media_list_help_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('writerpad_5000_help_background')">&#45;</button>
+		</div>
+		<div class="writerpad_5000_help_content">
+			<p class="writerpad_5000_help_paragraph">WritePad 5000</p>
+			<p class="writerpad_5000_help_paragraph">Version: 1.0</p>
+		</div>
+	</div>
+
+	<!-- IMAGE VIEWER 6000 -->
+	<div class="do_not_open_image_background" id="do_not_open_image_background">
+		<div class="do_not_open_image_title_bar">
+			DO_NOT_OPEN.jpeg - Image Viewer 6000
+			<button class="button_close" onclick="toggleDiv('do_not_open_image_background'); toggleDiv('do_not_open_image_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('do_not_open_image_background')">&#45;</button>
+		</div>
+		<div class="do_not_open_image_content">
+			<img src="media/pictures/ImageViewer/do_not_open.jpeg" class="do_not_open_image_image">
+		</div>
+		<div class="do_not_open_image_file_destination">
+			A:>Users:>FuckingIdiot:>PersonalFiles:>DO_NOT_OPEN.jpeg
+		</div>
+	</div>
+
+	<!-- SCP BROADCAST -->
+	<div class="scp_broadcast_background" id="scp_broadcast_background">
+		<div class="scp_broadcast_title_bar">AUTOMATED EMERGENCY BROADCAST SYSTEM | PAY CLOSE ATTENTION!</div>
+		<div class="scp_broadcast_content">
+			<video class="scp_broadcast_video" id="scp_broadcast_video" width="640px" loop>
+				<source src="media/videos/SCPBroadcast.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+
+	<!-- SYSTEM CUSTOMIZATION -->
+	<div class="system_customization_background" id="system_customization_background">
+		<div class="system_customization_title_bar">
+			System_Customization.exe
+			<button class="button_close" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('system_customization_background')">&#45;</button>
+		</div>
+		<div class="system_customization_content">
+			<p>Select display style</p>
+			<button class="system_customization_button" onclick="lightMode()">Light Mode</button>
+			<button class="system_customization_button" onclick="darkMode()">Dark Mode</button>
+		</div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
