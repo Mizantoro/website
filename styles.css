@@ -31,7 +31,7 @@ a {
 	color: var(--link-color);
 }
 p {
-	margin: 0; /* dziala *tylko* kiedy jest ustalowe w p edit: DZIALA Z JAKIEGOS KURWA POWODU NA WSZYSTKIE TOP MARGIN edit2: JEDNAK NIE ALE SPIERDOLILO CZESC Z NICH| https://stackoverflow.com/questions/17971829/how-to-remove-unwanted-margin-between-elements */
+	margin: 0;
 	color: var(--text-color-content);
 }
 h1 {
@@ -177,7 +177,7 @@ button {
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	background-color: var(--background-color);
 	position: absolute;
-	height: 400px;
+	height: 396px;
 	width: 440px;
 	top: 360px;
 	left: 100px;
@@ -478,7 +478,7 @@ button {
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	background-color: var(--background-color);
 	position: absolute;
-	height: 550px;
+	height: 560px;
 	width: 450px;
 	top: 100px;
 	left: 100px;
@@ -513,7 +513,7 @@ button {
 	padding-top: 4px;
 	background-color: var(--content-color);
 	width: 438px;
-	height: 456px;
+	height: 466px;
 	margin-left: 4px;
 	margin-top: 4px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
