@@ -38,6 +38,7 @@ async function SCP() {
 	document.getElementById('scp_broadcast_video').pause();
 }
 
+// draggable windows
 $(document).ready(function () {
     $(".internet_exploder_window_background").draggable({ handle: ".internet_exploder_title_bar" });
     $(".explode_da_internet_warning_window_background").draggable({ handle: ".internet_exploder_warning_title_bar" });
@@ -51,14 +52,74 @@ $(document).ready(function () {
 	$(".about_start_menu_background").draggable({ handle: ".about_start_menu_title_bar" });
 });
 
-window.onload = function (){
-	if (Math.floor(Math.random() * 50) === 0) { // https://www.w3schools.com/JS/js_random.asp
+// red screen of death
+async function redScreenOfDeath () {
+	if (Math.floor(Math.random() * 50) === 0) {
 		toggleDiv('taskbar');
 		toggleDiv('program_loader_background');
 		toggleDiv('file_list_background');
 		toggleDiv('red_screen_of_death');
 	}
 };
+
+// terminal
+window.onload = async function () {
+	let Commands = [
+		"MizantOS 1.0 Boot Sequence Starting...",
+		"[ OK ] BIOS Version 1.03.2137 detected",
+		"[ OK ] CPU Initialization Complete",
+		"[ OK ] Memory Test Passed: 256 MB",
+		"[ OK ] Detecting Drives...",
+		"[ OK ] SSD Drive (A:) 64GB Found",
+		"[ FAILED ] Floppy Drive (B:) 128GB Not Found",
+		"[ OK ] Loading Firmware",
+		"[ OK ] Keyboard Initialized",
+		"[ OK ] Mouse Initialized",
+		"[ OK ] Network Adapter Initialized",
+		"[ OK ] Checking Disk Integrity",
+		"[ OK ] Mounting Root Filesystem",
+		"[ OK ] Network Service",
+		"[ OK ] Emergency Alert System (EAS)",
+		"[ FAILED ] Driver web_cam.sys",
+		"[ OK ] Auto-Repair Initiated",
+		"[ OK ] Auto-Repair Completed Successfully",
+		"[ OK ] Starting MizantOS GUI",
+		"[ OK ] Audio Subsystem Initialized",
+		"[ WARNING ] Unauthorized USB device detected",
+		"[ OK ] Firewall Enabled",
+		"[ OK ] System Clock Synced with Atomic Time",
+		"[ OK ] Starting Background Tasks",
+		"[ INFO ] Internet_Exploder.exe is Disabled. You can enable it by opening Internet_Exploder.exe",
+		"[ WARNING ] SCP verification software detected hazardous files. Object class: Euclid. Code name: [ REDACTED ]",
+		"Connecting to Aperture Science Mainframe...",
+		"[ OK ] Connection Established to AS Server 42.7.0.15",
+		"[ INFO ] Running diagnostic on Aperture Science Server...",
+		"[ WARNING ] GLaDOS core detected - standby for unusual system behavior",
+		"[ OK ] All systems nominal",
+		"Welcome back, Fucking Idiot!",
+	];
+
+	document.getElementById("terminal_background").innerHTML += "__________________________________________________________";
+	document.getElementById("terminal_background").innerHTML += "<br><br>";
+	document.getElementById("terminal_background").innerHTML += "Mizantoro Industries 2025 | MizantOS kernel version 4.2.0";
+	document.getElementById("terminal_background").innerHTML += "<br>";
+	document.getElementById("terminal_background").innerHTML += "Copyright. MizantOS";
+	document.getElementById("terminal_background").innerHTML += "<br>";
+	document.getElementById("terminal_background").innerHTML += "__________________________________________________________";
+	document.getElementById("terminal_background").innerHTML += "<br><br>";
+
+	for (let i = 0; i < Commands.length; i++) {
+		let CurrentLine = Commands[i];
+		for (let j = 0; j < CurrentLine.length; j++) {
+			document.getElementById("terminal_background").innerHTML += CurrentLine[j];
+			await delay (1);
+		}
+		document.getElementById("terminal_background").innerHTML += "<br>";
+	}
+	await delay (200);
+	toggleDiv("terminal_background");
+	redScreenOfDeath();
+}
 
 function disableButton(id) {
 	document.getElementById(id).disabled = true;
