@@ -8,12 +8,51 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-	<!-- SCP AUDIO -->
-	<audio class="scp_096_audio" id="scp_096_audio">
+	<!-- AUDIO -->
+	<audio class="hidden_audio" id="scp_096_audio">
 		<source src="media/audio/SCP-096Scream.mp3" type="audio/mpeg">
 	</audio>
-	<audio class="scp_096_audio" id="glass_breaking_audio">
+	<audio class="hidden_audio" id="glass_breaking_audio">
 		<source src="media/audio/glass_breaking.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="C4">
+		<source src="media/audio/keyboard/C4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="Cs4">
+		<source src="media/audio/keyboard/Cs4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="D4">
+		<source src="media/audio/keyboard/D4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="Ds4">
+		<source src="media/audio/keyboard/Ds4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="E4">
+		<source src="media/audio/keyboard/E4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="F4">
+		<source src="media/audio/keyboard/F4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="Fs4">
+		<source src="media/audio/keyboard/Fs4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="G4">
+		<source src="media/audio/keyboard/G4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="Gs4">
+		<source src="media/audio/keyboard/Gs4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="A4">
+		<source src="media/audio/keyboard/A4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="As4">
+		<source src="media/audio/keyboard/As4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="B4">
+		<source src="media/audio/keyboard/B4.mp3" type="audio/mpeg">
+	</audio>
+	<audio class="hidden_audio" id="C5">
+		<source src="media/audio/keyboard/C5.mp3" type="audio/mpeg">
 	</audio>
 
 	<!-- TERMINAL -->
@@ -59,6 +98,7 @@
 		<button class="button_app_opened" id="eas_taskbar">AUTO EAS SYSTEM</button>
 		<button class="button_app_opened" id="internet_exploder_window_taskbar" onclick="toggleDiv('Internet_Exploder')">Internet_Exploder.exe</button>
 		<button class="button_app_opened" id="system_customization_taskbar" onclick="toggleDiv('system_customization_background')">System_Customization</button>
+		<button class="button_app_opened" id="keyboard_background_taskbar" onclick="toggleDiv('keyboard_background')">Keyboard_Player_7000</button>
 	</div>
 
 	<!-- START MENU -->
@@ -124,6 +164,7 @@
 		</div>
 		<div class="file_list_content">
 			<button class="file_list_button" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Night_on_computer.ico" class="file_list_icon">System_Customization</button>
+			<button class="file_list_button" onclick="toggleDiv('keyboard_background'); toggleDiv('keyboard_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Music_sheet.ico" class="file_list_icon">Keyboard_Player_7000</button>
 			<button class="file_list_button" onclick="toggleDiv('Internet_Exploder'); toggleDiv('internet_exploder_window_taskbar')"><img src="media/pictures/StartMenu/AppIcons/internet_exploder_icon.png" class="file_list_icon">Internet_Exploder.exe</button>
 		</div>
 	</div>
@@ -246,6 +287,30 @@
 			<p>Select display style</p>
 			<button class="system_customization_button" onclick="lightMode()">Light Mode</button>
 			<button class="system_customization_button" onclick="darkMode()">Dark Mode</button>
+		</div>
+	</div>
+
+	<!-- KEYBOARD -->
+	<div class="keyboard_background" id="keyboard_background">
+		<div class="keyboard_title_bar">
+			Keyboard Player 7000
+			<button class="button_close" onclick="toggleDiv('keyboard_background'); toggleDiv('keyboard_background_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('keyboard_background')">&#45;</button>
+		</div>
+		<div class="keyboard_content">
+			<button class="keyboard_white_key" onclick="playNote('C4')">C</button>
+			<button class="keyboard_black_key" onclick="playNote('Cs4')">C&#9839;<br>D&#9837;</button>
+			<button class="keyboard_white_key" onclick="playNote('D4')">D</button>
+			<button class="keyboard_black_key" onclick="playNote('Ds4')">D&#9839;<br>E&#9837;</button>
+			<button class="keyboard_white_key" onclick="playNote('E4')">E</button>
+			<button class="keyboard_white_key" onclick="playNote('F4')">F</button>
+			<button class="keyboard_black_key" onclick="playNote('Fs4')">F&#9839;<br>G&#9837;</button>
+			<button class="keyboard_white_key" onclick="playNote('G4')">G</button>
+			<button class="keyboard_black_key" onclick="playNote('Gs4')">G&#9839;<br>A&#9837;</button>
+			<button class="keyboard_white_key" onclick="playNote('A4')">A</button>
+			<button class="keyboard_black_key" onclick="playNote('As4')">A&#9839;<br>B&#9837;</button>
+			<button class="keyboard_white_key" onclick="playNote('B4')">B</button>
+			<button class="keyboard_white_key" onclick="playNote('C5')">C</button>
 		</div>
 	</div>
 

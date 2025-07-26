@@ -50,6 +50,7 @@ $(document).ready(function () {
 	$(".scp_broadcast_background").draggable({ handle: ".scp_broadcast_title_bar" });
 	$(".system_customization_background").draggable({ handle: ".system_customization_title_bar" });
 	$(".about_start_menu_background").draggable({ handle: ".about_start_menu_title_bar" });
+	$(".keyboard_background").draggable({ handle: ".keyboard_title_bar" });
 });
 
 // red screen of death
@@ -60,7 +61,7 @@ async function redScreenOfDeath () {
 		toggleDiv('file_list_background');
 		toggleDiv('red_screen_of_death');
 	}
-};
+}
 
 // terminal
 window.onload = async function () {
@@ -110,15 +111,17 @@ window.onload = async function () {
 
 	for (let i = 0; i < Commands.length; i++) {
 		let CurrentLine = Commands[i];
-		for (let j = 0; j < CurrentLine.length; j++) {
-			document.getElementById("terminal_background").innerHTML += CurrentLine[j];
-			await delay (1);
-		}
-		document.getElementById("terminal_background").innerHTML += "<br>";
+		document.getElementById("terminal_background").innerHTML += CurrentLine += "<br>";
+		await delay (70);
 	}
 	await delay (200);
 	toggleDiv("terminal_background");
 	redScreenOfDeath();
+}
+
+function playNote(note) {
+	document.getElementById(note).currentTime = 0;
+	document.getElementById(note).play();
 }
 
 function disableButton(id) {
