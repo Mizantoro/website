@@ -93,6 +93,7 @@
 		<button class="button_app_opened" id="program_loader_taskbar" onclick="toggleDiv('program_loader_background')">Program Loader</button>
 		<button class="button_app_opened" id="about_start_menu_taskbar" onclick="toggleDiv('about_start_menu_background')">About</button>
 		<button class="button_app_opened" id="social_media_list_taskbar" onclick="toggleDiv('social_media_list_background')">Social_Media_List.txt</button>
+		<button class="button_app_opened" id="song_list_taskbar" onclick="toggleDiv('song_list_background')">Song_List.txt</button>
 		<button class="button_app_opened" id="social_media_list_help_taskbar" onclick="toggleDiv('writerpad_5000_help_background')">About WritePad 5000</button>
 		<button class="button_app_opened" id="do_not_open_image_taskbar" onclick="toggleDiv('do_not_open_image_background')">DO_NOT_OPEN.jpeg</button>
 		<button class="button_app_opened" id="eas_taskbar">AUTO EAS SYSTEM</button>
@@ -151,6 +152,7 @@
 		</div>
 		<div class="file_list_content">
 			<button class="file_list_button" onclick="toggleDiv('social_media_list_background'); toggleDiv('social_media_list_taskbar')"><img src="media/pictures/StartMenu/AppIcons/social_media.ico" class="file_list_icon">Social_Media_List.txt</button>
+			<button class="file_list_button" onclick="toggleDiv('song_list_background'); toggleDiv('song_list_taskbar')"><img src="media/pictures/StartMenu/AppIcons/social_media.ico" class="file_list_icon">Song_List.txt</button>
 			<button class="file_list_button" onclick="SCP(); toggleDiv('do_not_open_image_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Painting.ico" class="file_list_icon">DO_NOT_OPEN.jpeg</button>
 		</div>
 	</div>
@@ -235,6 +237,48 @@
 		</div>
 		<div class="social_media_list_file_destination">
 			<p>A:>Users:>FuckingIdiot:>PersonalFiles:>Social_Media_List.txt</p>
+		</div>
+	</div>
+
+	<!-- SONG LIST -->
+	<div class="social_media_list_background" id="song_list_background">
+		<div class="social_media_list_title_bar">
+			Song_List.txt - WritePad 5000
+			<button class="button_close" onclick="toggleDiv('song_list_background'); toggleDiv('song_list_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('song_list_background')">&#45;</button>
+		</div>
+		<div class="social_media_list_toolbar">
+			<button class="social_media_list_toolbar_button" onclick="toggleDiv('writerpad_5000_help_background'); toggleDiv('social_media_list_help_taskbar')">Help</button>
+			The file is read only!
+		</div>
+		<div class="social_media_list_content">
+			<h2>Songs to play in Keyboard Player 7000</h2>
+			<h3>Twinkle Twinkle Little Star</h3>
+			<p>
+				C-C-G-G-A-A-G <br>
+				F-F-E-E-D-D-C <br>
+				G-G-F-F-E-E-D <br>
+				G-G-F-F-E-E-D <br>
+				C-C-G-G-A-A-G <br>
+				F-F-E-E-D-D-C <br>
+			</p>
+			<h3>Ode to Joy</h3>
+			<p>
+				E-E-F-G <br>
+				G-F-E-D <br>
+				C-C-D-E <br>
+				E-D-D <br>
+			</p>
+			<h3>Little Kitten on the Fence</h3>
+			<p>
+				G-E-E-F-D-D <br>
+				C-E-G <br>
+				G-E-E-F-D-D <br>
+				C-E-C <br>
+			</p>
+		</div>
+		<div class="social_media_list_file_destination">
+			<p>A:>Users:>FuckingIdiot:>PersonalFiles:>Song_List.txt</p>
 		</div>
 	</div>
 
