@@ -27,9 +27,9 @@ async function SCP() {
 	toggleDiv('scp_broadcast_background');
 	toggleDiv('eas_taskbar');
 	document.getElementById('scp_broadcast_video').play();
-	await delay(198000);
+	await delay(134000);
 	document.getElementById('scp_096_audio').play();
-	await delay(38000);
+	await delay(39000);
 	document.getElementById('glass_breaking_audio').play();
 	await delay(200);
 	toggleDiv('broken_glass');
@@ -117,6 +117,13 @@ window.onload = async function () {
 	await delay (200);
 	toggleDiv("terminal_background");
 	redScreenOfDeath();
+	displayDate();
+	setInterval(displayDate, 100);
+}
+
+async function displayDate () {
+	const date = new Date();
+	document.getElementById("taskbar_date").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "<br>" + date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
 }
 
 function playNote(note) {
