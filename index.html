@@ -56,16 +56,16 @@
 	</audio>
 
 	<!-- TERMINAL -->
-	<div class="terminal_background" id="terminal_background"></div>
+	<div id="terminal_background"></div>
 
 	<!-- SCREEN OFF -->
-	<div class="dark_screen" id="dark_screen"></div>
+	<div id="dark_screen"></div>
 
 	<!-- BROKEN GLASS -->
-	<img src="media/pictures/BrokenGlass/broken_glass0.png" class="broken_glass" id="broken_glass">
+	<img src="media/pictures/BrokenGlass/broken_glass0.png" id="broken_glass">
 
 	<!-- RED SCREEN OF DEATH -->
-	<div class="red_screen_of_death" id="red_screen_of_death">
+	<div id="red_screen_of_death">
 		<h1 style="color: white;">&#x2022;&#x60;&#x5f;&#xb4;&#x2022;</h1>
 		<h1 style="color: white;">Fuck You</h1>
 		<p class="red_screen_of_death_paragraph" style="color: white;">
@@ -73,11 +73,11 @@
 			It just decided to make your life harder you fuck. <br>
 			Click the reboot button to return to normal.
 		</p>
-		<button class="red_screen_of_death_button" id="red_screen_of_death_button" onclick="rickRoll()">Reboot</button>
+		<button id="red_screen_of_death_button" onclick="rickRoll()">Reboot</button>
 	</div>
 
 	<!-- RED SCREEN OF DEATH RICK ROLL -->
-	<div class="red_screen_of_death_rick_roll_background" id="red_screen_of_death_rick_roll_background">
+	<div id="red_screen_of_death_rick_roll_background">
 		<div class="red_screen_of_death_rick_roll_title_bar">The operating system will reboot after the video is finished.</div>
 		<div class="red_screen_of_death_rick_roll_content">
 			<video class="red_screen_of_death_rick_roll_video" id="rick_roll" width="400px">
@@ -87,7 +87,7 @@
 	</div>
 
 	<!-- TASK BAR -->
-	<div class="taskbar" id="taskbar">
+	<div id="taskbar">
 		<button class="button_start" onclick="toggleDiv('start_menu')">Start</button>
 		<button class="button_app_opened" id="file_list_taskbar" onclick="toggleDiv('file_list_background')">File Looker</button>
 		<button class="button_app_opened" id="program_loader_taskbar" onclick="toggleDiv('program_loader_background')">Program Loader</button>
@@ -101,11 +101,11 @@
 		<button class="button_app_opened" id="system_customization_taskbar" onclick="toggleDiv('system_customization_background')">System_Customization</button>
 		<button class="button_app_opened" id="keyboard_background_taskbar" onclick="toggleDiv('keyboard_background')">Keyboard_Player_7000</button>
 
-		<div class="taskbar_date" id="taskbar_date"></div>
+		<div id="taskbar_date"></div>
 	</div>
 
 	<!-- START MENU -->
-	<div class="start_menu_background" id="start_menu">
+	<div id="start_menu">
 		<div class="window_content">
 			<div class="profile_info">
 				<img class="profile_picture" src="media/pictures/StartMenu/ProfilePicture/profile_picture.jpg">
@@ -123,7 +123,7 @@
 	</div>
 
 	<!-- START MENU ABOUT WINDOW -->
-	<div class="about_start_menu_background" id="about_start_menu_background">
+	<div id="about_start_menu_background">
 		<div class="about_start_menu_title_bar">
 			About
 			<button class="button_close" onclick="toggleDiv('about_start_menu_background'); toggleDiv('about_start_menu_taskbar')">&#x2715;</button>
@@ -174,7 +174,7 @@
 	</div>
 
 	<!-- INTERNET EXPLODER --> 
-	<div class="internet_exploder_window_background" id="Internet_Exploder">
+	<div id="Internet_Exploder">
 		<div class="internet_exploder_title_bar">
 			Internet_Exploder.exe <button class="button_close" onclick="toggleDiv('Internet_Exploder'); toggleDiv('internet_exploder_window_taskbar')">&#x2715;</button>
 			<button class="button_close" onclick="toggleDiv('Internet_Exploder')">&#45;</button>
@@ -186,7 +186,7 @@
 	</div>
 
 	<!-- INTERNET EXPLODER WARNING --> 
-	<div class="explode_da_internet_warning_window_background" id="internet_exploder_warning">
+	<div id="internet_exploder_warning">
 		<div class="internet_exploder_warning_title_bar">
 			Warning <div class="button_close">&#x2715;</div>
 		</div>
@@ -198,7 +198,7 @@
 </div>
 
 	<!-- INTERNET HAS BEEN EXPLODED -->
-	<div class="explode_da_internet_warning_window_background" id="internet_has_been_exploded">
+	<div id="internet_has_been_exploded">
 		<div class="internet_exploder_warning_title_bar">
 			Action successful <div class="button_close">&#x2715;</div>
 		</div>
@@ -285,7 +285,7 @@
 	</div>
 
 	<!-- NOTEPAD 5000 HELP -->
-	<div class="writerpad_5000_help_background" id="writerpad_5000_help_background">
+	<div id="writerpad_5000_help_background">
 		<div class="writerpad_5000_help_title_bar">
 			About WritePad 5000
 			<button class="button_close" onclick="toggleDiv('writerpad_5000_help_background'); toggleDiv('social_media_list_help_taskbar')">&#x2715;</button>
@@ -298,7 +298,7 @@
 	</div>
 
 	<!-- IMAGE VIEWER 6000 -->
-	<div class="do_not_open_image_background" id="do_not_open_image_background">
+	<div id="do_not_open_image_background">
 		<div class="do_not_open_image_title_bar">
 			DO_NOT_OPEN.jpeg - Image Viewer 6000
 			<button class="button_close" onclick="toggleDiv('do_not_open_image_background'); toggleDiv('do_not_open_image_taskbar')">&#x2715;</button>
@@ -313,7 +313,7 @@
 	</div>
 
 	<!-- SCP BROADCAST -->
-	<div class="scp_broadcast_background" id="scp_broadcast_background">
+	<div id="scp_broadcast_background">
 		<div class="scp_broadcast_title_bar">AUTOMATED EMERGENCY BROADCAST SYSTEM | PAY CLOSE ATTENTION!</div>
 		<div class="scp_broadcast_content">
 			<video class="scp_broadcast_video" id="scp_broadcast_video" width="640px" loop>
@@ -323,7 +323,7 @@
 	</div>
 
 	<!-- SYSTEM CUSTOMIZATION -->
-	<div class="system_customization_background" id="system_customization_background">
+	<div id="system_customization_background">
 		<div class="system_customization_title_bar">
 			System_Customization.exe
 			<button class="button_close" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')">&#x2715;</button>
@@ -337,7 +337,7 @@
 	</div>
 
 	<!-- KEYBOARD -->
-	<div class="keyboard_background" id="keyboard_background">
+	<div id="keyboard_background">
 		<div class="keyboard_title_bar">
 			Keyboard Player 7000
 			<button class="button_close" onclick="toggleDiv('keyboard_background'); toggleDiv('keyboard_background_taskbar')">&#x2715;</button>

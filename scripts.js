@@ -42,15 +42,15 @@ async function SCP() {
 $(document).ready(function () {
     $(".internet_exploder_window_background").draggable({ handle: ".internet_exploder_title_bar" });
     $(".explode_da_internet_warning_window_background").draggable({ handle: ".internet_exploder_warning_title_bar" });
-	$(".red_screen_of_death_rick_roll_background").draggable({ handle: ".red_screen_of_death_rick_roll_title_bar" });
+	$("#red_screen_of_death_rick_roll_background").draggable({ handle: ".red_screen_of_death_rick_roll_title_bar" });
 	$(".social_media_list_background").draggable({ handle: ".social_media_list_title_bar" });
-	$(".writerpad_5000_help_background").draggable({ handle: ".writerpad_5000_help_title_bar" });
+	$("#writerpad_5000_help_background").draggable({ handle: ".writerpad_5000_help_title_bar" });
 	$(".file_list_background").draggable({ handle: ".file_list_title_bar" });
-	$(".do_not_open_image_background").draggable({ handle: ".do_not_open_image_title_bar" });
-	$(".scp_broadcast_background").draggable({ handle: ".scp_broadcast_title_bar" });
-	$(".system_customization_background").draggable({ handle: ".system_customization_title_bar" });
-	$(".about_start_menu_background").draggable({ handle: ".about_start_menu_title_bar" });
-	$(".keyboard_background").draggable({ handle: ".keyboard_title_bar" });
+	$("#do_not_open_image_background").draggable({ handle: ".do_not_open_image_title_bar" });
+	$("#scp_broadcast_background").draggable({ handle: ".scp_broadcast_title_bar" });
+	$("#system_customization_background").draggable({ handle: ".system_customization_title_bar" });
+	$("#about_start_menu_background").draggable({ handle: ".about_start_menu_title_bar" });
+	$("#keyboard_background").draggable({ handle: ".keyboard_title_bar" });
 });
 
 // red screen of death
