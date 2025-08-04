@@ -12,7 +12,7 @@ function toggleDiv(id) {
 }
 
 async function rickRoll() {
-	document.getElementById('rick_roll').play();
+	document.getElementById('red_screen_of_death_rick_roll_video').play();
 	toggleDiv('red_screen_of_death_rick_roll_background');
 	disableButton('red_screen_of_death_button');
 	await delay(210000); // Waits until the video is done playing (this is a terrible way of doing this, but im too lazy to write a proper condition).
@@ -40,17 +40,10 @@ async function SCP() {
 
 // draggable windows
 $(document).ready(function () {
-    $(".internet_exploder_window_background").draggable({ handle: ".internet_exploder_title_bar" });
-    $(".explode_da_internet_warning_window_background").draggable({ handle: ".internet_exploder_warning_title_bar" });
-	$(".red_screen_of_death_rick_roll_background").draggable({ handle: ".red_screen_of_death_rick_roll_title_bar" });
+	$(".window_background").draggable({ handle: ".window_title_bar" });
 	$(".social_media_list_background").draggable({ handle: ".social_media_list_title_bar" });
-	$(".writerpad_5000_help_background").draggable({ handle: ".writerpad_5000_help_title_bar" });
 	$(".file_list_background").draggable({ handle: ".file_list_title_bar" });
-	$(".do_not_open_image_background").draggable({ handle: ".do_not_open_image_title_bar" });
-	$(".scp_broadcast_background").draggable({ handle: ".scp_broadcast_title_bar" });
-	$(".system_customization_background").draggable({ handle: ".system_customization_title_bar" });
-	$(".about_start_menu_background").draggable({ handle: ".about_start_menu_title_bar" });
-	$(".keyboard_background").draggable({ handle: ".keyboard_title_bar" });
+	$(".explode_da_internet_warning_window_background").draggable({ handle: ".internet_exploder_warning_title_bar" });
 });
 
 // red screen of death
@@ -123,7 +116,13 @@ window.onload = async function () {
 
 async function displayDate () {
 	const date = new Date();
-	document.getElementById("taskbar_date").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "<br>" + date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+	document.getElementById("taskbar_date").innerHTML =
+		String(date.getHours()).padStart(2, '0') + ":" +
+		String(date.getMinutes()).padStart(2, '0') + ":" +
+		String(date.getSeconds()).padStart(2, '0') + "<br>" +
+		String(date.getDate()).padStart(2, '0') + "." +
+		String(date.getMonth() + 1).padStart(2, '0') + "." +
+		date.getFullYear();
 }
 
 function playNote(note) {
