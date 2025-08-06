@@ -40,7 +40,7 @@ button:active {
 }
 p {
     font-size: 30px;
-    line-height: 1; /* <-- dodaj to */
+    line-height: 1;
     margin-top: 2px;
 }
 a {
