@@ -12,8 +12,9 @@
 }
 body {
     background-image: url("../media/pictures/Korwin/korwin_background.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
     color: white;
 }
 h1 {

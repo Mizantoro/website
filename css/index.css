@@ -82,6 +82,22 @@ img {
 #korwin_project:hover {
     box-shadow: 4px 4px 12px rgb(20, 35, 69);
 }
+#depressing_project:hover {
+    box-shadow: 4px 4px 12px black;
+}
+#social_media {
+    height: 200px;
+    width: 400px;
+    background-color: var(--background-color-higher);
+    border-radius: 50px;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+    top: 50px;
+}
 #footer {
     background-color: var(--background-color-higher);
     width: 100%;
@@ -89,9 +105,10 @@ img {
     text-align: center;
     margin: 0;
     padding: 10px;
-    position: fixed;
+    position: relative; /* zamiast fixed */
     bottom: 0;
     left: 0;
+    margin-top: 60px;
 }
 #footer_paragraph {
     line-height: 0.1;

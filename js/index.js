@@ -12,5 +12,4 @@ async function switchTheme() {
         root.style.setProperty('--text-color', '#fff');
         document.getElementById("theme_toggle_img").src="media/pictures/index/ico/day.svg";
     }
-
 }
