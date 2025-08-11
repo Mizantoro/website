@@ -70,8 +70,8 @@ window.onload = async function() {
     async function countTree() {
         while(true) {
             document.getElementById("tree").innerHTML = tree + " m^2 deforested.";
-            tree++;
-            await delay(0.315);
+            tree += 453; // divided  by 7
+            await delay(143); // 1000 / 7 = 142.8571
         }
     }
 
