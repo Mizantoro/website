@@ -9,6 +9,7 @@
 }
 * {
     font-family: 'Special Elite', cursive;
+    overflow-x: hidden;
 }
 h1 {
     font-size: 50px;
@@ -30,7 +31,7 @@ body {
     background-attachment: fixed;
     color: white;
     margin: 0;
-    overflow-x: hidden;
+
 }
 #container {
     /* From https://css.glass */
@@ -40,7 +41,7 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     margin: 0 auto;
-    height: 900px;
+    height: auto;
     max-width: 800px;
     width: 70%;
     padding: 40px;
@@ -62,7 +63,13 @@ body {
     margin-top: 60px;
 }
 #footer_paragraph {
-    line-height: 0.1;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 30px;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
 }

@@ -10,6 +10,10 @@
 * {
     font-family: 'Lexend', sans-serif;
 }
+html {
+    height: 100vh;
+    overflow-x: hidden;
+}
 body {
     background-image: url("../media/pictures/Korwin/korwin_background.jpg");
     background-repeat: no-repeat;
@@ -22,6 +26,7 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
+    overflow-wrap: break-word;
 }
 button {
     border-radius: 40px;
@@ -60,10 +65,11 @@ a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     margin: 0 auto;
-    height: 600px;
+    min-height: 600px;
+    height: auto;
     max-width: 800px;
     width: 70%;
-    padding: 40px;
+    padding: 6%;
     text-align: center;
     overflow: hidden;
     margin-top: 40px;
@@ -110,6 +116,13 @@ a {
     margin-top: 60px;
 }
 #footer_paragraph {
-    line-height: 0.1;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
 }
