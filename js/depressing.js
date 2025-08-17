@@ -15,7 +15,12 @@ window.onload = async function() {
     // Time
     async function countTime() {
         while(true) {
-            document.getElementById("time").innerHTML = time + " seconds.";
+            if(time === 1) {
+                document.getElementById("time").innerHTML = time + " second.";
+            }
+            else {
+                document.getElementById("time").innerHTML = time + " seconds.";
+            }
             time++;
             await delay(1000);
         }

@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 ::-moz-selection { /* Code for Firefox */
     color: white;
-    background-color: #21344a;
+    background-color: #6b748c;
 }
 ::selection {
     color: white;
-    background-color: #21344a;
+    background-color: #6b748c;
 }
 * {
-    font-family: 'Special Elite', cursive;
+    font-family: 'Orbitron', sans-serif;
     overflow-x: hidden;
 }
 h1 {
@@ -20,12 +20,13 @@ h2 {
 }
 p {
     font-size: 20px;
+    font-family: 'Ubuntu', monospace;
 }
 a {
     color: white;
 }
 body {
-    background-image: url('../media/pictures/depressing-stats/depressing.jpg');
+    background-image: url('../media/pictures/scientific-stats/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -67,6 +68,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 @media(max-width: 600px) {

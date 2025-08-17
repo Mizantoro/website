@@ -65,7 +65,7 @@ img {
     background-color: var(--background-color-higher);
     border-radius: 40px;
     cursor: pointer;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    transition: transform 0.2s ease-out, box-shadow 0.3s ease-out;
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
@@ -95,6 +95,9 @@ img {
 #secret_project:hover {
     box-shadow: 4px 4px 12px #ccb293;
 }
+#space_project:hover {
+    box-shadow: 4px 4px 12px #415c7b;
+}
 #footer {
     background-color: var(--background-color-higher);
     width: 100%;
@@ -117,7 +120,7 @@ img {
         margin-right: 2%;
     }
     h1 {
-       font-size: 52px;
+        font-size: 52px;
     }
     .project_tile {
         width: 98%;
