@@ -98,6 +98,9 @@ img {
 #space_project:hover {
     box-shadow: 4px 4px 12px #415c7b;
 }
+#vision_project:hover {
+    box-shadow: 4px 4px 12px #ff8800;
+}
 #footer {
     background-color: var(--background-color-higher);
     width: 100%;

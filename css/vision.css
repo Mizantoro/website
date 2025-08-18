@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+* {
+    font-family: 'Lexend', sans-serif;
+    color: white;
+}
+body {
+    background-image: url("../media/pictures/vision/clear.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 40%;
+    background-attachment: fixed;
+    text-align: center;
+    transition: 0.3s;
+}
+h1 {
+    color: #fff;
+    text-shadow:
+            0 0 5px #ff8800,
+            0 0 10px #ff8800,
+            0 0 20px #ff8800,
+            0 0 40px #ff8800;
+    font-size: 40px;
+    transition: 0.3s;
+}
+a {
+    color: #ff8800;
+    transition: 0.3s;
+}
+button {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: none;
+    height: 50px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+    font-size: 30px;
+}
+button:hover {
+    transform: scale(1.05);
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
