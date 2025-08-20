@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+body {
+    background-image: url('../media/pictures/vinyl/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+h1 {
+    font-size: 60px;
+}
+audio {
+    display: none;
+}
+* {
+    font-family: 'Fjalla One', sans-serif;
+}
+input {
+    height: 320px;
+    width: 450px;
+    position: fixed;
+    opacity: 0;
+    cursor: pointer;
+}
+.sleeve {
+    width: 400px;
+    height: 400px;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+#container {
+    width: auto;
+    height: auto;
+    display: none;
+    rotate: 20deg;
+    left: 640px;
+    top: 300px;
+    position: absolute;
+}
+#player {
+    width: 450px;
+    height: 320px;
+    left: 100px;
+    top: 300px;
+    position: absolute;
+    background-image: url('../media/pictures/vinyl/vinyl_player.jpg');
+    border-radius: 15px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    transform: rotate(-3deg);
+}
+#disk_place {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #0e0e0e;
+    margin-top: 70px;
+    margin-left: 70px;
+    position: relative;
+    perspective: 500px;
+}
+#disk {
+    display: none;
+    width: 398px;
+    height: 398px;
+    border-radius: 50%;
+    background-color: #0e0e0e;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    animation-name: spin; /* https://codepen.io/teerapuch/pen/vLJXeR */
+    animation-duration: 1818ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */
+    /* transform: rotate(.03turn);  */
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease;
+}
+#disk_label {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+}
+#disk_label_hole {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0e0e0e;
+    margin: 0;
+    position: absolute;
+    top: 52px;
+    left: 52px;
+}
+#disk_label p {
+    margin-top: -20px;
+    text-align: center;
+    line-height: 120px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+}
+.knobs {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0e0e0e;
+    right: 20px;
+    bottom: 20px;
+    position: absolute;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+#knob_second {
+    bottom: 60px;
+}
+#stylus_root {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #9f9f9f;
+    margin-left: 300px;
+    position: absolute;
+    top: -30px;
+    z-index: 1;
+}
+#stylus {
+    width: 10px;
+    height: 240px;
+    background-color: #c0c0c0 ;
+    margin-left: 5px;
+    transform-origin: top;
+    /*transform: rotate(14deg);*/
+    /*transform: rotate(46deg);*/
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 1.5s ease;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@media(max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    #player {
+        top: 500px;
+        left: 0px;
+    }
+    #container {
+        left: 0;
+        top: 1000px;
+        scale: 0.6;
+        margin-left: 0
+    }
+}

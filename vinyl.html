@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vinyl</title>
+    <link rel="stylesheet" href="css/vinyl.css">
+    <link rel="icon" href="media/pictures/Meta/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<audio id="audio"></audio>
+<audio src="media/audio/vinyl/crackle.mp3" id="audio2" loop></audio>
+
+<h1>Vinyl</h1>
+<p id="text">
+    Welcome to the online vinyl player! To get started, click on the player.<br>
+    Keep in mind that in order to use every function of this website,<br>
+    mp3 files must have following metadata: artist, title, track.
+</p>
+
+<div id="container">
+    <div class="sleeve"> <img id="cover" width="400px"></div>
+    <div class="sleeve"> <p id="list">Could not display titles:<br> mp3 files missing metadata</p> </div>
+</div>
+
+<div id="player">
+    <input type="file" name="file" id="file" accept="audio/mp3" multiple onchange="readMetaData(this.files)">
+    <div id="disk_place">
+        <div id="stylus_root">
+            <div id="stylus"></div>
+        </div>
+        <div id="disk">
+            <div id="disk_label">
+                <p id="label_paragraph">Missing metadata</p>
+                <div id="disk_label_hole"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="knobs"></div>
+    <div class="knobs" id="knob_second"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+<script src="js/vinyl.js"></script>
+</body>
+</html>
