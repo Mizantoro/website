@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    user-select: none;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+audio {
+    display: none;
+}
+h2 {
+    font-size: 30px;
+}
+body {
+    background-color: #050505;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    flex-direction: column;
+}
+button {
+    cursor: pointer;
+    background: none;
+    border-color: #ffffff;
+    border-width: 2px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+}
+.credit {
+    margin: 0;
+    color: #322f2f;
+}
+#information {
+    position: absolute;
+    opacity: 0;
+    transition: 300ms;
+    top: 0;
+    top: 80px;
+}
+#god_mode_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    top: 10px;
+    left: 10px;
+    position: fixed;
+    padding: 0;
+    height: 30px;
+    width: 100px;
+    border: none;
+}
+
+/* CRAFTING TABLE */
+#crafting_table {
+    width: 300px;
+    height: 300px;
+    background: none;
+    padding: 20px;
+    border-width: 4px;
+    border-style: dashed;
+    border-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms;
+}
+#crafting_table p{
+    position: absolute;
+    color: #322f2f;
+}
+#crafting_button {
+    width: 350px;
+    height: 80px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #0e0e0e;
+    color: #322f2f;
+    transition: 300ms;
+}
+#crafting_button:hover:enabled {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+#crafting_button:disabled {
+    border-style: dashed;
+    cursor: not-allowed;
+}
+
+/* ELEMENTS */
+/* QUARKS */
+.up_quark {
+    top: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #3de140;
+    font-size: 26px;
+    transition: transform 150ms;
+    cursor: grab;
+}
+.up_quark:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px #3de140;
+    cursor: grabbing;
+}
+.down_quark {
+    top: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #065bbf;
+    font-size: 26px;
+    transition: transform 150ms;
+    cursor: grab;
+}
+.down_quark:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px #065bbf;
+    cursor: grabbing;
+}
+
+/* LARGER SHIT */
+.proton {
+    top: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #e11212;
+    font-size: 46px;
+    transition: transform 150ms;
+    cursor: grab;
+}
+.proton:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px #e11212;
+    cursor: grabbing;
+}
+.neutron {
+    top: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #1265e1;
+    font-size: 46px;
+    transition: transform 150ms;
+    cursor: grab;
+}
+.neutron:active {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px #1265e1;
+    cursor: grabbing;
+}
+
+/* PERIODIC TABLE */
+#periodic_table_container {
+    margin-top: 80px;
+    position: absolute;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 960px;
+    width: auto;
+    background: #191919;
+    z-index: 9999;
+    border-radius: 10px;
+}
+#periodic_table_container button {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+}
+#periodic_table_container button:hover {
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.23);
+}
+#periodic_table {
+    display: grid;
+    grid-template-columns: repeat(18, 80px);
+    grid-template-rows: repeat(7, 80px);
+    gap: 10px;
+    grid-auto-flow: column;
+    margin: 20px;
+}
+#periodic_table p {
+    font-size: 12px;
+    margin: 0;
+}
+#periodic_table a {
+    font-size: 10px;
+    margin: 0;
+}
+#periodic_table h2 {
+    margin: 0;
+    font-size: 20px;
+}
+.periodic_table_element_locked {
+    background-color: #101010;
+    cursor: not-allowed;
+}
+/* Hidding elements with p, h2, a doesn't work as it should. */
+/* Hide them separately to keep browsers from bitching */
+.periodic_table_element_locked p{
+    background-color: #101010;
+    color: transparent !important;
+    cursor: not-allowed;
+}
+.periodic_table_element_locked h2{
+    background-color: #101010;
+    color: transparent !important;
+    cursor: not-allowed;
+}
+.periodic_table_element_locked a{
+    background-color: #101010;
+    cursor: not-allowed;
+    display: none;
+}
+.periodic_table_element_alkali_metals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #dd4b4b;
+    padding: 8px;
+}
+.periodic_table_element_empty {
+
+}
+.periodic_table_element_alkaline_earth_metals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #bca30d;
+    padding: 8px;
+}
+.periodic_table_element_transition_metals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #47bc0d;
+    padding: 8px;
+}
+.periodic_table_element_post_transition_metals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #15cdac;
+    padding: 8px;
+}
+.periodic_table_element_other_nonmetals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d113b8;
+    padding: 8px;
+}
+.periodic_table_element_noble_gases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #da9311;
+    padding: 8px;
+}
+.periodic_table_element_metalloids {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #114ada;
+    padding: 8px;
+}
+.periodic_table_element_lanthanides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6b14bc;
+    padding: 8px;
+}
+.periodic_table_element_actinides {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #9531ef;
+    padding: 8px;
+}
+#periodic_table_f_block {
+    display: grid;
+    grid-template-columns: repeat(15, 80px);
+    grid-template-rows: repeat(2, 80px);
+    gap: 10px;
+    grid-auto-flow: row;
+    margin: 20px;
+}
+#periodic_table_f_block p {
+    font-size: 12px;
+    margin: 0;
+}
+#periodic_table_f_block a {
+    font-size: 10px;
+    margin: 0;
+}
+#periodic_table_f_block h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* MENU */
+#menu {
+    position: absolute;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background: #0e0e0e;
+    bottom: 0;
+    gap: 10px;
+}
+#button_up_quark {
+    border-color: #3de140;
+}
+#button_down_quark {
+    border-color: #065bbf;
+}
+#button_proton {
+    display: none;
+    border-color: #e11212;
+}
+#button_neutron {
+    display: none;
+    border-color: #1265e1;
+}
+#periodic_table_button {
+    display: none;
+    border-color: #ffffff;
+}

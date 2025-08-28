@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Elements Crafter</title>
+    <link rel="stylesheet" href="css/elements-crafter.css">
+    <link rel="icon" href="media/pictures/Meta/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<audio id="pop" controls>
+    <source src="media/audio/elements-crafter/pop.mp3" type="audio/mp3">
+</audio>
+<audio id="double_pop" controls>
+    <source src="media/audio/elements-crafter/double_pop.mp3" type="audio/mp3">
+</audio>
+<audio id="pop_crafting" controls>
+    <source src="media/audio/elements-crafter/pop_crafting.mp3" type="audio/mp3">
+</audio>
+<audio id="remove" controls>
+    <source src="media/audio/elements-crafter/remove.mp3" type="audio/mp3">
+</audio>
+<audio id="thunder" controls>
+    <source src="media/audio/elements-crafter/thunder.mp3" type="audio/mp3">
+</audio>
+
+<button id="god_mode_button" onclick="godMode()"><img src="media/pictures/elements-crafter/bolt.svg">God Mode</button>
+
+<div id="periodic_table_container">
+    <button onclick="toggleDiv('periodic_table_container')"><img src="media/pictures/elements-crafter/close.svg"></button>
+    <h2>Periodic Table</h2>
+    <div id="periodic_table">
+        <!-- ALKALI METALS -->
+        <div id="Hydrogen" class="periodic_table_element_alkali_metals">
+            <h2>H</h2>
+            <p>1</p>
+            <a href="https://en.wikipedia.org/wiki/Hydrogen" target="_blank">Hydrogen</a>
+            <p>1.008</p>
+        </div>
+        <div id="Lithium" class="periodic_table_element_locked">
+            <h2>Li</h2>
+            <p>3</p>
+            <a href="https://en.wikipedia.org/wiki/Lithium" target="_blank">Lithium</a>
+            <p>6.94</p>
+        </div>
+        <div id="Sodium" class="periodic_table_element_locked">
+            <h2>Na</h2>
+            <p>11</p>
+            <a href="https://en.wikipedia.org/wiki/Sodium" target="_blank">Sodium</a>
+            <p>22.99</p>
+        </div>
+        <div id="Potassium" class="periodic_table_element_locked">
+            <h2>K</h2>
+            <p>19</p>
+            <a href="https://en.wikipedia.org/wiki/Potassium" target="_blank">Potassium</a>
+            <p>39.10</p>
+        </div>
+        <div id="Rubidium" class="periodic_table_element_locked">
+            <h2>Rb</h2>
+            <p>37</p>
+            <a href="https://en.wikipedia.org/wiki/Rubidium" target="_blank">Rubidium</a>
+            <p>85.47</p>
+        </div>
+        <div id="Cesium" class="periodic_table_element_locked">
+            <h2>Cs</h2>
+            <p>55</p>
+            <a href="https://en.wikipedia.org/wiki/Caesium" target="_blank">Caesium</a>
+            <p>132.91</p>
+        </div>
+        <div id="Francium" class="periodic_table_element_locked">
+            <h2>Fr</h2>
+            <p>87</p>
+            <a href="https://en.wikipedia.org/wiki/Francium" target="_blank">Francium</a>
+            <p>[223]</p>
+        </div>
+
+        <!-- ALKALINE EARTH METALS -->
+        <div class="periodic_table_element_empty"></div>
+        <div id="Beryllium" class="periodic_table_element_locked">
+            <h2>Be</h2>
+            <p>4</p>
+            <a href="https://en.wikipedia.org/wiki/Beryllium" target="_blank">Beryllium</a>
+            <p>9.0122</p>
+        </div>
+        <div id="Magnesium" class="periodic_table_element_locked">
+            <h2>Mg</h2>
+            <p>12</p>
+            <a href="https://en.wikipedia.org/wiki/Magnesium" target="_blank">Magnesium</a>
+            <p>24.305</p>
+        </div>
+        <div id="Calcium" class="periodic_table_element_locked">
+            <h2>Ca</h2>
+            <p>20</p>
+            <a href="https://en.wikipedia.org/wiki/Calcium" target="_blank">Calcium</a>
+            <p>40.078</p>
+        </div>
+        <div id="Strontium" class="periodic_table_element_locked">
+            <h2>Sr</h2>
+            <p>38</p>
+            <a href="https://en.wikipedia.org/wiki/Strontium" target="_blank">Strontium</a>
+            <p>87.62</p>
+        </div>
+        <div id="Barium" class="periodic_table_element_locked">
+            <h2>Ba</h2>
+            <p>56</p>
+            <a href="https://en.wikipedia.org/wiki/Barium" target="_blank">Barium</a>
+            <p>137.33</p>
+        </div>
+        <div id="Radium" class="periodic_table_element_locked">
+            <h2>Ra</h2>
+            <p>88</p>
+            <a href="https://en.wikipedia.org/wiki/Radium" target="_blank">Radium</a>
+            <p>[226]</p>
+        </div>
+
+        <!-- TRANSITION METALS -->
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Scandium" class="periodic_table_element_locked">
+            <h2>Sc</h2>
+            <p>21</p>
+            <a href="https://en.wikipedia.org/wiki/Scandium" target="_blank">Scandium</a>
+            <p>44.956</p>
+        </div>
+        <div id="Yttrium" class="periodic_table_element_locked">
+            <h2>Y</h2>
+            <p>39</p>
+            <a href="https://en.wikipedia.org/wiki/Yttrium" target="_blank">Yttrium</a>
+            <p>88.906</p>
+        </div>
+        <!-- PLACEHOLDERS FOR f-BLOCK -->
+        <div id="La-Lu" class="periodic_table_element_locked">
+            <h2>La–Lu</h2>
+            <p>57–71</p>
+            <p>Lanthanides</p>
+            <p>f-block</p>
+        </div>
+        <div id="Ac-Lr" class="periodic_table_element_locked">
+            <h2>Ac–Lr</h2>
+            <p>89–103</p>
+            <p>Actinides</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Titanium" class="periodic_table_element_locked">
+            <h2>Ti</h2>
+            <p>22</p>
+            <a href="https://en.wikipedia.org/wiki/Titanium" target="_blank">Titanium</a>
+            <p>47.867</p>
+        </div>
+        <div id="Zirconium" class="periodic_table_element_locked">
+            <h2>Zr</h2>
+            <p>40</p>
+            <a href="https://en.wikipedia.org/wiki/Zirconium" target="_blank">Zirconium</a>
+            <p>91.224</p>
+        </div>
+        <div id="Hafnium" class="periodic_table_element_locked">
+            <h2>Hf</h2>
+            <p>72</p>
+            <a href="https://en.wikipedia.org/wiki/Hafnium" target="_blank">Hafnium</a>
+            <p>178.49</p>
+        </div>
+        <div id="Rutherfordium" class="periodic_table_element_locked">
+            <h2>Rf</h2>
+            <p>104</p>
+            <a href="https://en.wikipedia.org/wiki/Rutherfordium" target="_blank">Rutherfordium</a>
+            <p>[267]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Vanadium" class="periodic_table_element_locked">
+            <h2>V</h2>
+            <p>23</p>
+            <a href="https://en.wikipedia.org/wiki/Vanadium" target="_blank">Vanadium</a>
+            <p>50.942</p>
+        </div>
+        <div id="Niobium" class="periodic_table_element_locked">
+            <h2>Nb</h2>
+            <p>41</p>
+            <a href="https://en.wikipedia.org/wiki/Niobium" target="_blank">Niobium</a>
+            <p>92.906</p>
+        </div>
+        <div id="Tantalum" class="periodic_table_element_locked">
+            <h2>Ta</h2>
+            <p>73</p>
+            <a href="https://en.wikipedia.org/wiki/Tantalum" target="_blank">Tantalum</a>
+            <p>180.95</p>
+        </div>
+        <div id="Dubnium" class="periodic_table_element_locked">
+            <h2>Db</h2>
+            <p>105</p>
+            <a href="https://en.wikipedia.org/wiki/Dubnium" target="_blank">Dubnium</a>
+            <p>[268]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Chromium" class="periodic_table_element_locked">
+            <h2>Cr</h2>
+            <p>24</p>
+            <a href="https://en.wikipedia.org/wiki/Chromium" target="_blank">Chromium</a>
+            <p>51.996</p>
+        </div>
+        <div id="Molybdenum" class="periodic_table_element_locked">
+            <h2>Mo</h2>
+            <p>42</p>
+            <a href="https://en.wikipedia.org/wiki/Molybdenum" target="_blank">Molybdenum</a>
+            <p>95.95</p>
+        </div>
+        <div id="Tungsten" class="periodic_table_element_locked">
+            <h2>W</h2>
+            <p>74</p>
+            <a href="https://en.wikipedia.org/wiki/Tungsten" target="_blank">Tungsten</a>
+            <p>183.84</p>
+        </div>
+        <div id="Seaborgium" class="periodic_table_element_locked">
+            <h2>Sg</h2>
+            <p>106</p>
+            <a href="https://en.wikipedia.org/wiki/Seaborgium" target="_blank">Seaborgium</a>
+            <p>[271]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Manganese" class="periodic_table_element_locked">
+            <h2>Mn</h2>
+            <p>25</p>
+            <a href="https://en.wikipedia.org/wiki/Manganese" target="_blank">Manganese</a>
+            <p>54.938</p>
+        </div>
+        <div id="Technetium" class="periodic_table_element_locked">
+            <h2>Tc</h2>
+            <p>43</p>
+            <a href="https://en.wikipedia.org/wiki/Technetium" target="_blank">Technetium</a>
+            <p>[98]</p>
+        </div>
+        <div id="Rhenium" class="periodic_table_element_locked">
+            <h2>Re</h2>
+            <p>75</p>
+            <a href="https://en.wikipedia.org/wiki/Rhenium" target="_blank">Rhenium</a>
+            <p>186.21</p>
+        </div>
+        <div id="Bohrium" class="periodic_table_element_locked">
+            <h2>Bh</h2>
+            <p>107</p>
+            <a href="https://en.wikipedia.org/wiki/Bohrium" target="_blank">Bohrium</a>
+            <p>[270]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Iron" class="periodic_table_element_locked">
+            <h2>Fe</h2>
+            <p>26</p>
+            <a href="https://en.wikipedia.org/wiki/Iron" target="_blank">Iron</a>
+            <p>55.845</p>
+        </div>
+        <div id="Ruthenium" class="periodic_table_element_locked">
+            <h2>Ru</h2>
+            <p>44</p>
+            <a href="https://en.wikipedia.org/wiki/Ruthenium" target="_blank">Ruthenium</a>
+            <p>101.07</p>
+        </div>
+        <div id="Osmium" class="periodic_table_element_locked">
+            <h2>Os</h2>
+            <p>76</p>
+            <a href="https://en.wikipedia.org/wiki/Osmium" target="_blank">Osmium</a>
+            <p>190.23</p>
+        </div>
+        <div id="Hassium" class="periodic_table_element_locked">
+            <h2>Hs</h2>
+            <p>108</p>
+            <a href="https://en.wikipedia.org/wiki/Hassium" target="_blank">Hassium</a>
+            <p>[277]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Cobalt" class="periodic_table_element_locked">
+            <h2>Co</h2>
+            <p>27</p>
+            <a href="https://en.wikipedia.org/wiki/Cobalt" target="_blank">Cobalt</a>
+            <p>58.933</p>
+        </div>
+        <div id="Rhodium" class="periodic_table_element_locked">
+            <h2>Rh</h2>
+            <p>45</p>
+            <a href="https://en.wikipedia.org/wiki/Rhodium" target="_blank">Rhodium</a>
+            <p>102.91</p>
+        </div>
+        <div id="Iridium" class="periodic_table_element_locked">
+            <h2>Ir</h2>
+            <p>77</p>
+            <a href="https://en.wikipedia.org/wiki/Iridium" target="_blank">Iridium</a>
+            <p>192.22</p>
+        </div>
+        <div id="Meitnerium" class="periodic_table_element_locked">
+            <h2>Mt</h2>
+            <p>109</p>
+            <a href="https://en.wikipedia.org/wiki/Meitnerium" target="_blank">Meitnerium</a>
+            <p>[278]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Nickel" class="periodic_table_element_locked">
+            <h2>Ni</h2>
+            <p>28</p>
+            <a href="https://en.wikipedia.org/wiki/Nickel" target="_blank">Nickel</a>
+            <p>58.693</p>
+        </div>
+        <div id="Palladium" class="periodic_table_element_locked">
+            <h2>Pd</h2>
+            <p>46</p>
+            <a href="https://en.wikipedia.org/wiki/Palladium" target="_blank">Palladium</a>
+            <p>106.42</p>
+        </div>
+        <div id="Platinum" class="periodic_table_element_locked">
+            <h2>Pt</h2>
+            <p>78</p>
+            <a href="https://en.wikipedia.org/wiki/Platinum" target="_blank">Platinum</a>
+            <p>195.08</p>
+        </div>
+        <div id="Darmstadtium" class="periodic_table_element_locked">
+            <h2>Ds</h2>
+            <p>110</p>
+            <a href="https://en.wikipedia.org/wiki/Darmstadtium" target="_blank">Darmstadtium</a>
+            <p>[281]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Copper" class="periodic_table_element_locked">
+            <h2>Cu</h2>
+            <p>29</p>
+            <a href="https://en.wikipedia.org/wiki/Copper" target="_blank">Copper</a>
+            <p>63.546</p>
+        </div>
+        <div id="Silver" class="periodic_table_element_locked">
+            <h2>Ag</h2>
+            <p>47</p>
+            <a href="https://en.wikipedia.org/wiki/Silver" target="_blank">Silver</a>
+            <p>107.87</p>
+        </div>
+        <div id="Gold" class="periodic_table_element_locked">
+            <h2>Au</h2>
+            <p>79</p>
+            <a href="https://en.wikipedia.org/wiki/Gold" target="_blank">Gold</a>
+            <p>196.97</p>
+        </div>
+        <div id="Roentgenium" class="periodic_table_element_locked">
+            <h2>Rg</h2>
+            <p>111</p>
+            <a href="https://en.wikipedia.org/wiki/Roentgenium" target="_blank">Roentgenium</a>
+            <p>[282]</p>
+        </div>
+
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div class="periodic_table_element_empty"></div>
+        <div id="Zinc" class="periodic_table_element_locked">
+            <h2>Zn</h2>
+            <p>30</p>
+            <a href="https://en.wikipedia.org/wiki/Zinc" target="_blank">Zinc</a>
+            <p>65.38</p>
+        </div>
+        <div id="Cadmium" class="periodic_table_element_locked">
+            <h2>Cd</h2>
+            <p>48</p>
+            <a href="https://en.wikipedia.org/wiki/Cadmium" target="_blank">Cadmium</a>
+            <p>112.41</p>
+        </div>
+        <div id="Mercury" class="periodic_table_element_locked">
+            <h2>Hg</h2>
+            <p>80</p>
+            <a href="https://en.wikipedia.org/wiki/Mercury_(element)" target="_blank">Mercury</a>
+            <p>200.59</p>
+        </div>
+        <div id="Copernicium" class="periodic_table_element_locked">
+            <h2>Cn</h2>
+            <p>112</p>
+            <a href="https://en.wikipedia.org/wiki/Copernicium" target="_blank">Copernicium</a>
+            <p>[285]</p>
+        </div>
+
+        <!-- P-BLOCK -->
+        <!-- GROUP 13 -->
+        <div class="periodic_table_element_empty"></div>
+        <div id="Boron" class="periodic_table_element_locked">
+            <h2>B</h2>
+            <p>5</p>
+            <a href="https://en.wikipedia.org/wiki/Boron" target="_blank">Boron</a>
+            <p>10.81</p>
+        </div>
+        <div id="Aluminium" class="periodic_table_element_locked">
+            <h2>Al</h2>
+            <p>13</p>
+            <a href="https://en.wikipedia.org/wiki/Aluminium" target="_blank">Aluminium</a>
+            <p>26.982</p>
+        </div>
+        <div id="Gallium" class="periodic_table_element_locked">
+            <h2>Ga</h2>
+            <p>31</p>
+            <a href="https://en.wikipedia.org/wiki/Gallium" target="_blank">Gallium</a>
+            <p>69.723</p>
+        </div>
+        <div id="Indium" class="periodic_table_element_locked">
+            <h2>In</h2>
+            <p>49</p>
+            <a href="https://en.wikipedia.org/wiki/Indium" target="_blank">Indium</a>
+            <p>114.82</p>
+        </div>
+        <div id="Thallium" class="periodic_table_element_locked">
+            <h2>Tl</h2>
+            <p>81</p>
+            <a href="https://en.wikipedia.org/wiki/Thallium" target="_blank">Thallium</a>
+            <p>204.38</p>
+        </div>
+        <div id="Nihonium" class="periodic_table_element_locked">
+            <h2>Nh</h2>
+            <p>113</p>
+            <a href="https://en.wikipedia.org/wiki/Nihonium" target="_blank">Nihonium</a>
+            <p>[286]</p>
+        </div>
+
+        <!-- GROUP 14 -->
+        <div class="periodic_table_element_empty"></div>
+        <div id="Carbon" class="periodic_table_element_locked">
+            <h2>C</h2>
+            <p>6</p>
+            <a href="https://en.wikipedia.org/wiki/Carbon" target="_blank">Carbon</a>
+            <p>12.011</p>
+        </div>
+        <div id="Silicon" class="periodic_table_element_locked">
+            <h2>Si</h2>
+            <p>14</p>
+            <a href="https://en.wikipedia.org/wiki/Silicon" target="_blank">Silicon</a>
+            <p>28.085</p>
+        </div>
+        <div id="Germanium" class="periodic_table_element_locked">
+            <h2>Ge</h2>
+            <p>32</p>
+            <a href="https://en.wikipedia.org/wiki/Germanium" target="_blank">Germanium</a>
+            <p>72.630</p>
+        </div>
+        <div id="Tin" class="periodic_table_element_locked">
+            <h2>Sn</h2>
+            <p>50</p>
+            <a href="https://en.wikipedia.org/wiki/Tin" target="_blank">Tin</a>
+            <p>118.71</p>
+        </div>
+        <div id="Lead" class="periodic_table_element_locked">
+            <h2>Pb</h2>
+            <p>82</p>
+            <a href="https://en.wikipedia.org/wiki/Lead" target="_blank">Lead</a>
+            <p>207.2</p>
+        </div>
+        <div id="Flerovium" class="periodic_table_element_locked">
+            <h2>Fl</h2>
+            <p>114</p>
+            <a href="https://en.wikipedia.org/wiki/Flerovium" target="_blank">Flerovium</a>
+            <p>[289]</p>
+        </div>
+
+        <!-- GROUP 15 -->
+        <div class="periodic_table_element_empty"></div>
+        <div id="Nitrogen" class="periodic_table_element_locked">
+            <h2>N</h2>
+            <p>7</p>
+            <a href="https://en.wikipedia.org/wiki/Nitrogen" target="_blank">Nitrogen</a>
+            <p>14.007</p>
+        </div>
+        <div id="Phosphorus" class="periodic_table_element_locked">
+            <h2>P</h2>
+            <p>15</p>
+            <a href="https://en.wikipedia.org/wiki/Phosphorus" target="_blank">Phosphorus</a>
+            <p>30.974</p>
+        </div>
+        <div id="Arsenic" class="periodic_table_element_locked">
+            <h2>As</h2>
+            <p>33</p>
+            <a href="https://en.wikipedia.org/wiki/Arsenic" target="_blank">Arsenic</a>
+            <p>74.922</p>
+        </div>
+        <div id="Antimony" class="periodic_table_element_locked">
+            <h2>Sb</h2>
+            <p>51</p>
+            <a href="https://en.wikipedia.org/wiki/Antimony" target="_blank">Antimony</a>
+            <p>121.76</p>
+        </div>
+        <div id="Bismuth" class="periodic_table_element_locked">
+            <h2>Bi</h2>
+            <p>83</p>
+            <a href="https://en.wikipedia.org/wiki/Bismuth" target="_blank">Bismuth</a>
+            <p>208.98</p>
+        </div>
+        <div id="Moscovium" class="periodic_table_element_locked">
+            <h2>Mc</h2>
+            <p>115</p>
+            <a href="https://en.wikipedia.org/wiki/Moscovium" target="_blank">Moscovium</a>
+            <p>[290]</p>
+        </div>
+
+        <!-- GROUP 16 -->
+        <div class="periodic_table_element_empty"></div>
+        <div id="Oxygen" class="periodic_table_element_locked">
+            <h2>O</h2>
+            <p>8</p>
+            <a href="https://en.wikipedia.org/wiki/Oxygen" target="_blank">Oxygen</a>
+            <p>15.999</p>
+        </div>
+        <div id="Sulfur" class="periodic_table_element_locked">
+            <h2>S</h2>
+            <p>16</p>
+            <a href="https://en.wikipedia.org/wiki/Sulfur" target="_blank">Sulfur</a>
+            <p>32.06</p>
+        </div>
+        <div id="Selenium" class="periodic_table_element_locked">
+            <h2>Se</h2>
+            <p>34</p>
+            <a href="https://en.wikipedia.org/wiki/Selenium" target="_blank">Selenium</a>
+            <p>78.971</p>
+        </div>
+        <div id="Tellurium" class="periodic_table_element_locked">
+            <h2>Te</h2>
+            <p>52</p>
+            <a href="https://en.wikipedia.org/wiki/Tellurium" target="_blank">Tellurium</a>
+            <p>127.60</p>
+        </div>
+        <div id="Polonium" class="periodic_table_element_locked">
+            <h2>Po</h2>
+            <p>84</p>
+            <a href="https://en.wikipedia.org/wiki/Polonium" target="_blank">Polonium</a>
+            <p>209</p>
+        </div>
+        <div id="Livermorium" class="periodic_table_element_locked">
+            <h2>Lv</h2>
+            <p>116</p>
+            <a href="https://en.wikipedia.org/wiki/Livermorium" target="_blank">Livermorium</a>
+            <p>[293]</p>
+        </div>
+
+        <!-- GROUP 17 -->
+        <div class="periodic_table_element_empty"></div>
+        <div id="Fluorine" class="periodic_table_element_locked">
+            <h2>F</h2>
+            <p>9</p>
+            <a href="https://en.wikipedia.org/wiki/Fluorine" target="_blank">Fluorine</a>
+            <p>18.998</p>
+        </div>
+        <div id="Chlorine" class="periodic_table_element_locked">
+            <h2>Cl</h2>
+            <p>17</p>
+            <a href="https://en.wikipedia.org/wiki/Chlorine" target="_blank">Chlorine</a>
+            <p>35.45</p>
+        </div>
+        <div id="Bromine" class="periodic_table_element_locked">
+            <h2>Br</h2>
+            <p>35</p>
+            <a href="https://en.wikipedia.org/wiki/Bromine" target="_blank">Bromine</a>
+            <p>79.904</p>
+        </div>
+        <div id="Iodine" class="periodic_table_element_locked">
+            <h2>I</h2>
+            <p>53</p>
+            <a href="https://en.wikipedia.org/wiki/Iodine" target="_blank">Iodine</a>
+            <p>126.90</p>
+        </div>
+        <div id="Astatine" class="periodic_table_element_locked">
+            <h2>At</h2>
+            <p>85</p>
+            <a href="https://en.wikipedia.org/wiki/Astatine" target="_blank">Astatine</a>
+            <p>[210]</p>
+        </div>
+        <div id="Tennessine" class="periodic_table_element_locked">
+            <h2>Ts</h2>
+            <p>117</p>
+            <a href="https://en.wikipedia.org/wiki/Tennessine" target="_blank">Tennessine</a>
+            <p>[294]</p>
+        </div>
+
+        <!-- GROUP 18 -->
+        <div id="Helium" class="periodic_table_element_locked">
+            <h2>He</h2>
+            <p>2</p>
+            <a href="https://en.wikipedia.org/wiki/Helium" target="_blank">Helium</a>
+            <p>4.0026</p>
+        </div>
+        <div id="Neon" class="periodic_table_element_locked">
+            <h2>Ne</h2>
+            <p>10</p>
+            <a href="https://en.wikipedia.org/wiki/Neon" target="_blank">Neon</a>
+            <p>20.180</p>
+        </div>
+        <div id="Argon" class="periodic_table_element_locked">
+            <h2>Ar</h2>
+            <p>18</p>
+            <a href="https://en.wikipedia.org/wiki/Argon" target="_blank">Argon</a>
+            <p>39.948</p>
+        </div>
+        <div id="Krypton" class="periodic_table_element_locked">
+            <h2>Kr</h2>
+            <p>36</p>
+            <a href="https://en.wikipedia.org/wiki/Krypton" target="_blank">Krypton</a>
+            <p>83.798</p>
+        </div>
+        <div id="Xenon" class="periodic_table_element_locked">
+            <h2>Xe</h2>
+            <p>54</p>
+            <a href="https://en.wikipedia.org/wiki/Xenon" target="_blank">Xenon</a>
+            <p>131.29</p>
+        </div>
+        <div id="Radon" class="periodic_table_element_locked">
+            <h2>Rn</h2>
+            <p>86</p>
+            <a href="https://en.wikipedia.org/wiki/Radon" target="_blank">Radon</a>
+            <p>[222]</p>
+        </div>
+        <div id="Oganesson" class="periodic_table_element_locked">
+            <h2>Og</h2>
+            <p>118</p>
+            <a href="https://en.wikipedia.org/wiki/Oganesson" target="_blank">Oganesson</a>
+            <p>[294]</p>
+        </div>
+    </div>
+    <div id="periodic_table_f_block">
+        <!-- f-BLOCK -->
+        <!-- LANTHANIDES -->
+        <div id="Lanthanum" class="periodic_table_element_locked">
+            <h2>La</h2>
+            <p>57</p>
+            <a href="https://en.wikipedia.org/wiki/Lanthanum" target="_blank">Lanthanum</a>
+            <p>138.91</p>
+        </div>
+        <div id="Cerium" class="periodic_table_element_locked">
+            <h2>Ce</h2>
+            <p>58</p>
+            <a href="https://en.wikipedia.org/wiki/Cerium" target="_blank">Cerium</a>
+            <p>140.12</p>
+        </div>
+        <div id="Praseodymium" class="periodic_table_element_locked">
+            <h2>Pr</h2>
+            <p>59</p>
+            <a href="https://en.wikipedia.org/wiki/Praseodymium" target="_blank">Praseodymium</a>
+            <p>140.91</p>
+        </div>
+        <div id="Neodymium" class="periodic_table_element_locked">
+            <h2>Nd</h2>
+            <p>60</p>
+            <a href="https://en.wikipedia.org/wiki/Neodymium" target="_blank">Neodymium</a>
+            <p>144.24</p>
+        </div>
+        <div id="Promethium" class="periodic_table_element_locked">
+            <h2>Pm</h2>
+            <p>61</p>
+            <a href="https://en.wikipedia.org/wiki/Promethium" target="_blank">Promethium</a>
+            <p>[145]</p>
+        </div>
+        <div id="Samarium" class="periodic_table_element_locked">
+            <h2>Sm</h2>
+            <p>62</p>
+            <a href="https://en.wikipedia.org/wiki/Samarium" target="_blank">Samarium</a>
+            <p>150.36</p>
+        </div>
+        <div id="Europium" class="periodic_table_element_locked">
+            <h2>Eu</h2>
+            <p>63</p>
+            <a href="https://en.wikipedia.org/wiki/Europium" target="_blank">Europium</a>
+            <p>151.96</p>
+        </div>
+        <div id="Gadolinium" class="periodic_table_element_locked">
+            <h2>Gd</h2>
+            <p>64</p>
+            <a href="https://en.wikipedia.org/wiki/Gadolinium" target="_blank">Gadolinium</a>
+            <p>157.25</p>
+        </div>
+        <div id="Terbium" class="periodic_table_element_locked">
+            <h2>Tb</h2>
+            <p>65</p>
+            <a href="https://en.wikipedia.org/wiki/Terbium" target="_blank">Terbium</a>
+            <p>158.93</p>
+        </div>
+        <div id="Dysprosium" class="periodic_table_element_locked">
+            <h2>Dy</h2>
+            <p>66</p>
+            <a href="https://en.wikipedia.org/wiki/Dysprosium" target="_blank">Dysprosium</a>
+            <p>162.50</p>
+        </div>
+        <div id="Holmium" class="periodic_table_element_locked">
+            <h2>Ho</h2>
+            <p>67</p>
+            <a href="https://en.wikipedia.org/wiki/Holmium" target="_blank">Holmium</a>
+            <p>164.93</p>
+        </div>
+        <div id="Erbium" class="periodic_table_element_locked">
+            <h2>Er</h2>
+            <p>68</p>
+            <a href="https://en.wikipedia.org/wiki/Erbium" target="_blank">Erbium</a>
+            <p>167.26</p>
+        </div>
+        <div id="Thulium" class="periodic_table_element_locked">
+            <h2>Tm</h2>
+            <p>69</p>
+            <a href="https://en.wikipedia.org/wiki/Thulium" target="_blank">Thulium</a>
+            <p>168.93</p>
+        </div>
+        <div id="Ytterbium" class="periodic_table_element_locked">
+            <h2>Yb</h2>
+            <p>70</p>
+            <a href="https://en.wikipedia.org/wiki/Ytterbium" target="_blank">Ytterbium</a>
+            <p>173.05</p>
+        </div>
+        <div id="Lutetium" class="periodic_table_element_locked">
+            <h2>Lu</h2>
+            <p>71</p>
+            <a href="https://en.wikipedia.org/wiki/Lutetium" target="_blank">Lutetium</a>
+            <p>174.97</p>
+        </div>
+
+        <!-- ACTINIDES -->
+        <div id="Actinium" class="periodic_table_element_locked">
+            <h2>Ac</h2>
+            <p>89</p>
+            <a href="https://en.wikipedia.org/wiki/Actinium" target="_blank">Actinium</a>
+            <p>227</p>
+        </div>
+        <div id="Thorium" class="periodic_table_element_locked">
+            <h2>Th</h2>
+            <p>90</p>
+            <a href="https://en.wikipedia.org/wiki/Thorium" target="_blank">Thorium</a>
+            <p>232.04</p>
+        </div>
+        <div id="Protactinium" class="periodic_table_element_locked">
+            <h2>Pa</h2>
+            <p>91</p>
+            <a href="https://en.wikipedia.org/wiki/Protactinium" target="_blank">Protactinium</a>
+            <p>231.04</p>
+        </div>
+        <div id="Uranium" class="periodic_table_element_locked">
+            <h2>U</h2>
+            <p>92</p>
+            <a href="https://en.wikipedia.org/wiki/Uranium" target="_blank">Uranium</a>
+            <p>238.03</p>
+        </div>
+        <div id="Neptunium" class="periodic_table_element_locked">
+            <h2>Np</h2>
+            <p>93</p>
+            <a href="https://en.wikipedia.org/wiki/Neptunium" target="_blank">Neptunium</a>
+            <p>237</p>
+        </div>
+        <div id="Plutonium" class="periodic_table_element_locked">
+            <h2>Pu</h2>
+            <p>94</p>
+            <a href="https://en.wikipedia.org/wiki/Plutonium" target="_blank">Plutonium</a>
+            <p>244</p>
+        </div>
+        <div id="Americium" class="periodic_table_element_locked">
+            <h2>Am</h2>
+            <p>95</p>
+            <a href="https://en.wikipedia.org/wiki/Americium" target="_blank">Americium</a>
+            <p>243</p>
+        </div>
+        <div id="Curium" class="periodic_table_element_locked">
+            <h2>Cm</h2>
+            <p>96</p>
+            <a href="https://en.wikipedia.org/wiki/Curium" target="_blank">Curium</a>
+            <p>247</p>
+        </div>
+        <div id="Berkelium" class="periodic_table_element_locked">
+            <h2>Bk</h2>
+            <p>97</p>
+            <a href="https://en.wikipedia.org/wiki/Berkelium" target="_blank">Berkelium</a>
+            <p>247</p>
+        </div>
+        <div id="Californium" class="periodic_table_element_locked">
+            <h2>Cf</h2>
+            <p>98</p>
+            <a href="https://en.wikipedia.org/wiki/Californium" target="_blank">Californium</a>
+            <p>251</p>
+        </div>
+        <div id="Einsteinium" class="periodic_table_element_locked">
+            <h2>Es</h2>
+            <p>99</p>
+            <a href="https://en.wikipedia.org/wiki/Einsteinium" target="_blank">Einsteinium</a>
+            <p>252</p>
+        </div>
+        <div id="Fermium" class="periodic_table_element_locked">
+            <h2>Fm</h2>
+            <p>100</p>
+            <a href="https://en.wikipedia.org/wiki/Fermium" target="_blank">Fermium</a>
+            <p>257</p>
+        </div>
+        <div id="Mendelevium" class="periodic_table_element_locked">
+            <h2>Md</h2>
+            <p>101</p>
+            <a href="https://en.wikipedia.org/wiki/Mendelevium" target="_blank">Mendelevium</a>
+            <p>258</p>
+        </div>
+        <div id="Nobelium" class="periodic_table_element_locked">
+            <h2>No</h2>
+            <p>102</p>
+            <a href="https://en.wikipedia.org/wiki/Nobelium" target="_blank">Nobelium</a>
+            <p>259</p>
+        </div>
+        <div id="Lawrencium" class="periodic_table_element_locked">
+            <h2>Lr</h2>
+            <p>103</p>
+            <a href="https://en.wikipedia.org/wiki/Lawrencium" target="_blank">Lawrencium</a>
+            <p>262</p>
+        </div>
+    </div>
+</div>
+
+<h2 id="information"></h2>
+<button id="crafting_button" onclick="resetCrafting()" disabled>RESET</button>
+<div id="crafting_table">
+    <p>Crafting Table</p>
+</div>
+<p class="credit">Website by Mizantoro</p>
+<a class="credit" href="https://github.com/Mizantoro/website" target="_blank">Source Code</a>
+
+<div id="menu">
+    <button id="periodic_table_button" onclick="toggleDiv('periodic_table_container')">Periodic Table</button>
+    <button id="button_up_quark" onclick="addElements('up_quark')">Add up quark</button>
+    <button id="button_down_quark" onclick="addElements('down_quark')">Add down quark</button>
+    <button id="button_proton" onclick="addElements('proton')">Add proton</button>
+    <button id="button_neutron" onclick="addElements('neutron')">Add neutron</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- https://stackoverflow.com/questions/3172100/html-drag-and-drop-on-mobile-devices -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script src="js/elements-crafter.js"></script>
+</body>
+</html>
