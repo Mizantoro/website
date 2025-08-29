@@ -202,13 +202,17 @@ async function Craftable() {
         document.getElementById("periodic_table_button").style.display = 'block';
     }
     // Other elements
-    if ((Proton > 1 && Proton <= 20 && Neutron >= Proton - 1 && Neutron <= Proton + 1) ||
-        (Proton > 20 && Neutron >= Math.round(Proton * 1.2) - 5 && Neutron <= Math.round(Proton * 1.2) + 5) &&
+    if (
+        (
+            (Proton > 1 && Proton <= 20 && Neutron >= Proton - 1 && Neutron <= Proton + 1) ||
+            (Proton > 20 && Neutron >= Math.round(Proton * 1.2) - 5 && Neutron <= Math.round(Proton * 1.2) + 5)
+        ) &&
         DownQuarks === 0 &&
         UpQuarks === 0 &&
-        ElementsCrafted[Proton + 1] === false) {
+        ElementsCrafted[Proton - 1] === false
+    ) {
 
-        ElementsCrafted[Proton + 1] = true;
+        ElementsCrafted[Proton - 1] = true;
         document.getElementById("information").innerHTML = 'You have crafted ' + Elements[Proton - 1];
         animateCrafting();
         await delay(1000);
