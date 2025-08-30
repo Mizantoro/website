@@ -20,6 +20,10 @@ body {
     gap: 20px;
     flex-direction: column;
 }
+html, body {
+    height: 100%;   /* pełna wysokość */
+    margin: 0;      /* brak marginesów */
+}
 button {
     cursor: pointer;
     background: none;
@@ -34,7 +38,6 @@ button {
     color: #322f2f;
 }
 #information {
-    position: absolute;
     opacity: 0;
     transition: 300ms;
     top: 0;
@@ -52,6 +55,14 @@ button {
     height: 30px;
     width: 100px;
     border: none;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 /* CRAFTING TABLE */
@@ -334,7 +345,7 @@ button {
 
 /* MENU */
 #menu {
-    position: absolute;
+    position: relative;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -342,9 +353,10 @@ button {
     height: 200px;
     width: 100%;
     background: #0e0e0e;
-    bottom: 0;
     gap: 10px;
+    margin-top: auto;
 }
+
 #button_up_quark {
     border-color: #3de140;
 }

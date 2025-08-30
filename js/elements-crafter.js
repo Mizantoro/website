@@ -80,7 +80,7 @@ function addElements(newElement) {
     if (newElement === "neutron") {
         newDiv.textContent = 'n0';
     }
-    document.body.appendChild(newDiv);
+    document.getElementById('container').appendChild(newDiv);
     $(newDiv).draggable({
         stack: "div"
     });
