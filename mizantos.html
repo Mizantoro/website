@@ -98,8 +98,8 @@
 		<button class="button_app_opened" id="eas_taskbar">AUTO EAS SYSTEM</button>
 		<button class="button_app_opened" id="internet_exploder_window_taskbar" onclick="toggleDiv('internet_exploder_window_background')">Internet_Exploder.exe</button>
 		<button class="button_app_opened" id="system_customization_taskbar" onclick="toggleDiv('system_customization_background')">System_Customization</button>
+		<button class="button_app_opened" id="system_customization_advanced_taskbar" onclick="toggleDiv('system_customization_advanced_background')">Sys_Cust_Advanced</button>
 		<button class="button_app_opened" id="keyboard_background_taskbar" onclick="toggleDiv('keyboard_background')">Keyboard_Player_7000</button>
-
 		<div id="taskbar_date"></div>
 	</div>
 
@@ -332,6 +332,50 @@
 			<p>Select display style</p>
 			<button class="system_customization_button" onclick="lightMode()">Light Mode</button>
 			<button class="system_customization_button" onclick="darkMode()">Dark Mode</button>
+			<button class="system_customization_button" onclick="toggleDiv('system_customization_advanced_background'); toggleDiv('system_customization_advanced_taskbar')">Advanced</button>
+		</div>
+	</div>
+
+	<!-- SYSTEM CUSTOMIZATION ADVANCED -->
+	<div class="window_background" id="system_customization_advanced_background">
+		<div class="window_title_bar" id="system_customization_advanced_title_bar">
+			Advanced
+			<button class="button_close" onclick="toggleDiv('system_customization_advanced_background'); toggleDiv('system_customization_advanced_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('system_customization_advanced_background')">&#45;</button>
+		</div>
+		<div class="window_content" id="system_customization_advanced_content">
+			<p>Background color</p>
+			<button class="system_customization_advanced_button" onclick="changeColor('default', '--wallpaper-color')">Default</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('red', '--wallpaper-color')">Red</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('green', '--wallpaper-color')">Green</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('blue', '--wallpaper-color')">Blue</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('purple', '--wallpaper-color')">Purple</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('deeppink', '--wallpaper-color')">Pink</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkred', '--wallpaper-color')">Dark Red</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkblue', '--wallpaper-color')">Dark Blue</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkgreen', '--wallpaper-color')">Dark Green</button>
+
+			<p>Content color</p>
+			<button class="system_customization_advanced_button" onclick="changeColor('default', '--content-color')">Default</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('red', '--content-color')">Red</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('green', '--content-color')">Green</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('blue', '--content-color')">Blue</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('purple', '--content-color')">Purple</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('deeppink', '--content-color')">Pink</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkred', '--content-color')">Dark Red</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkblue', '--content-color')">Dark Blue</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkgreen', '--content-color')">Dark Green</button>
+
+			<p>Accent color</p>
+			<button class="system_customization_advanced_button" onclick="changeColor('default', '--accent-color')">Default</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('red', '--accent-color')">Red</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('green', '--accent-color')">Green</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('blue', '--accent-color')">Blue</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('purple', '--accent-color')">Purple</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('deeppink', '--accent-color')">Pink</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkred', '--accent-color')">Dark Red</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkblue', '--accent-color')">Dark Blue</button>
+			<button class="system_customization_advanced_button" onclick="changeColor('darkgreen', '--accent-color')">Dark Green</button>
 		</div>
 	</div>
 
@@ -361,6 +405,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="js/scripts.js"></script>
+<script src="js/mizantos.js"></script>
 </body>
 </html>

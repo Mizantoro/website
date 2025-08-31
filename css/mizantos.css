@@ -51,6 +51,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+
 }
 html {
 	cursor: url('../media/cursors/normal.cur'), auto;
@@ -601,7 +602,7 @@ button {
 /* SYSTEM CUSTOMIZATION */
 #system_customization_background {
 	width: 232px;
-	height: 146px;
+	height: 162px;
 }
 #system_customization_title_bar {
 	width: 224px;
@@ -609,11 +610,37 @@ button {
 #system_customization_content {
 	font-size: 20px;
 	width: 224px;
-	height: 104px;
+	height: 120px;
 }
 .system_customization_button {
 	width: 224px;
 	height: 30px;
+	display: flex;
+	border-radius: 0;
+	text-align: left;
+	font-size: 18px;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	margin-bottom: 4px;
+}
+/* SYSTEM CUSTOMIZATION ADVANCED */
+#system_customization_advanced_background {
+	height: 600px;
+	width: 160px;
+}
+#system_customization_advanced_content {
+	height: 558px;
+	width: 152px;
+	font-size: 20px;
+	overflow-y: scroll;
+}
+#system_customization_advanced_title_bar {
+	width: 152px;
+}
+.system_customization_advanced_button {
+	height: 30px;
+	width: 152px;
 	display: flex;
 	border-radius: 0;
 	text-align: left;
