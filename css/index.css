@@ -104,6 +104,9 @@ img {
 #vinyl_project:hover {
     box-shadow: 4px 4px 12px #757671;
 }
+#kowalski_project:hover {
+    box-shadow: 4px 4px 12px #10131a;
+}
 #elements_crafter_project:hover {
     box-shadow: 4px 4px 12px #050505;
 }

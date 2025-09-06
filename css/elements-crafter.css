@@ -375,3 +375,41 @@ button {
     display: none;
     border-color: #ffffff;
 }
+
+@media(max-width: 1800px) {
+    #periodic_table {
+        grid-template-columns: repeat(18, 70px);
+        grid-template-rows: repeat(7, 70px);
+    }
+}
+@media(max-width: 1500px) {
+    #periodic_table {
+        grid-template-columns: repeat(18, 60px);
+        grid-template-rows: repeat(7, 60px);
+    }
+    #periodic_table h2{
+        font-size: 16px;
+    }
+    #periodic_table p {
+        font-size: 10px;
+        margin: 0;
+    }
+    #periodic_table a {
+        font-size: 8px;
+    }
+}
+@media(max-width: 1240px) {
+    #periodic_table_f_block {
+        grid-template-columns: repeat(15, 60px);
+        grid-template-rows: repeat(2, 60px);
+    }
+    #periodic_table_f_block h2 {
+        font-size: 16px;
+    }
+    #periodic_table_f_block p {
+        font-size: 10px;
+    }
+    #periodic_table_f_block a {
+        font-size: 8px;
+    }
+}
