@@ -110,6 +110,9 @@ img {
 #elements_crafter_project:hover {
     box-shadow: 4px 4px 12px #050505;
 }
+#red_or_blue_project:hover {
+    box-shadow: 4px 4px 12px #1b67dc;
+}
 #footer {
     background-color: var(--background-color-higher);
     width: 100%;
