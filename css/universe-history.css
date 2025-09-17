@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    font-family: 'Funnel Sans', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    font-size: 0; /* Remove the fucking white space between inline-block elements */
+}
+div {
+    margin-right: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+h1 {
+    margin: 0;
+    font-size: 60px;
+}
+p {
+    margin: 0;
+    font-size: 26px;
+}
+a {
+    margin: 0;
+    font-size: 20px;
+}
+button {
+    width: 120px;
+    height: 40px;
+    border-color: white;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 20px;
+}
+button:hover {
+    color: black;
+    background-color: white;
+}
+#indicator {
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    left: 60px;
+}
+#intro {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 50px;
+    gap: 14px;
+}
+#inflation {
+    height: 100vh;
+    width: 2000px;
+    background: #000;
+    display: inline-block;
+}

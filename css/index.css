@@ -113,6 +113,20 @@ img {
 #red_or_blue_project:hover {
     box-shadow: 4px 4px 12px #1b67dc;
 }
+#social_media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+#social_media a {
+    text-decoration: none;
+}
+#social_media p {
+    text-align: center;
+    font-size: 16px;
+}
 #footer {
     background-color: var(--background-color-higher);
     width: 100%;
