@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 :root {
     --background-color: #090909;
     --background-color-higher: #121212;
     --text-color: #fff;
 }
 ::-moz-selection { /* Code for Firefox */
-    color: var(--content-color);
-    background-color: var(--accent-color);
+    color: var(--background-color);
+    background-color: var(--text-color);
 }
 ::selection {
-    color: var(--content-color);
-    background-color: var(--accent-color);
+    color: var(--background-color);
+    background-color: var(--text-color);
 }
 html body {
     margin: 0;
@@ -38,6 +40,9 @@ h2 {
 }
 img {
     border-radius: 38px;
+}
+button {
+    cursor: pointer;
 }
 #welcome {
     background-color: var(--background-color-higher);
@@ -142,6 +147,64 @@ img {
 #footer_paragraph {
     margin-top: 10px;
     margin-bottom: 20px;
+}
+#eye_container {
+    position: fixed;
+    left: -200px;
+    bottom: 20px;
+    transition: 3s;
+    width: 170px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#eye_button_container {
+    transition: 3s;
+    opacity: 0;
+}
+#eye_button_container button {
+    width: 100%;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-family: 'Special Elite', cursive;
+}
+#eye_button_container button:hover {
+    text-shadow:
+            0 0 3px #fff,
+            0 0 6px #fff,
+            0 0 9px #fff;
+}
+#eye {
+    height: 170px;
+    width: 170px;
+    cursor: not-allowed;
+    margin-top: 20px;
+}
+#dialogue_text {
+    font-size: 12px;
+    font-family: 'Special Elite', cursive;
+    transition: 3s;
+    opacity: 0;
+}
+#dialogue_text a {
+    font-family: 'Special Elite', cursive;
+}
+
+@keyframes xy-shaking {
+    0%   { transform: translate(0, 0); }
+    10%  { transform: translate(5px, -3px); }
+    20%  { transform: translate(-4px, 6px); }
+    30%  { transform: translate(3px, -5px); }
+    40%  { transform: translate(-6px, 4px); }
+    50%  { transform: translate(4px, -4px); }
+    60%  { transform: translate(-3px, 5px); }
+    70%  { transform: translate(5px, 3px); }
+    80%  { transform: translate(-5px, -5px); }
+    90%  { transform: translate(2px, -6px); }
+    100% { transform: translate(0, 0); }
 }
 
 @media(max-width: 600px) {
