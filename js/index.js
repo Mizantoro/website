@@ -29,6 +29,19 @@ window.addEventListener("scroll", async function scroll() {
     }
 });
 
+window.onload = async function () {
+    const data = new FormData();
+    data.append("views", "1");
+    fetch("php/index.php", {
+        method: "POST",
+        body: data
+    })
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById("views").innerHTML = text;
+        })
+}
+
 let dialogues = {
     start: {
         text: "What do you seek, my child?",
