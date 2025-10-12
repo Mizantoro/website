@@ -129,6 +129,9 @@ button {
 #russian_roulette_project:hover {
     box-shadow: 4px 4px 12px #131313;
 }
+#biology_crafter_project:hover {
+    box-shadow: 4px 4px 12px #89ff6f;
+}
 #social_media {
     display: flex;
     flex-direction: column;

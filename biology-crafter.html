@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>Biology Crafter</title>
+    <link rel="stylesheet" href="css/biology-crafter.css">
+    <link rel="icon" href="media/pictures/Meta/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Biology Crafter</h1>
+<div id="string_container">
+    <p id="DNA_string_2"></p>
+    <p id="DNA_string"></p>
+    <p id="RNA_string"></p>
+    <p id="codon_string"></p>
+</div>
+<div class="button_container" id="DNAorRNA">
+    <p>
+        Do you want to create <button onclick="showButtons('DNA')">DNA</button> or <button onclick="showButtons('RNA')">RNA</button>?
+    </p>
+</div>
+<div class="button_container" id="createRNA">
+    <button onclick="addNucleotides('adenine', 'RNA')">Add Adenine</button>
+    <button onclick="addNucleotides('guanine', 'RNA')">Add Guanine</button>
+    <button onclick="addNucleotides('cytosine', 'RNA')">Add Cytosine</button>
+    <button onclick="addNucleotides('uracil', 'RNA')">Add Uracil</button>
+    <button onclick="recognizeCodons()">Synthesize protein</button>
+    <button onclick="contentClear()">Clear</button>
+</div>
+<div class="button_container" id="createDNA">
+    <button onclick="addNucleotides('adenine', 'DNA')">Add Adenine</button>
+    <button onclick="addNucleotides('guanine', 'DNA')">Add Guanine</button>
+    <button onclick="addNucleotides('cytosine', 'DNA')">Add Cytosine</button>
+    <button onclick="addNucleotides('thymine', 'DNA')">Add Thymine</button>
+    <button onclick="createSecondStringDNA()">Synthesize second string</button>
+    <button onclick="contentClear()">Clear</button>
+</div>
+<div class="button_container" id="transcription">
+    <button onclick="createRNAfromDNA(0)">Synthesize RNA from the first string</button>
+    <button onclick="createRNAfromDNA(1)">Synthesize RNA from the second string</button>
+</div>
+<div class="button_container" id="translation">
+    <button onclick="recognizeCodons()">Synthesize protein from the first string</button>
+</div>
+<div class="button_container" id="end">
+    <button onclick="contentClear()">Clear</button>
+</div>
+<div id="DNA_polymerase">
+    DNA polymerase
+</div>
+<div id="RNA_polymerase">
+    RNA polymerase
+</div>
+<div id="ribosome">
+    <div id="ribosome_small"></div>
+    <div id="ribosome_big">Ribosome</div>
+</div>
+
+<div id="footer">
+    <h2>Website by Mizantoro</h2>
+    <a href="https://github.com/Mizantoro/website" target="_blank">Source Code</a>
+    <p>
+        Note: This program is designed for learning and experimentation.<br>
+        It shows a simplified model of how these processes happen in real life.
+    </p>
+</div>
+<script src="js/biology-crafter.js"></script>
+</body>
