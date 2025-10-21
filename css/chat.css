@@ -1,0 +1,107 @@
+:root {
+    --background-color: #000000;
+    --accent-color: #00FF41;
+    --text-color: #fff;
+}
+::-moz-selection { /* Code for Firefox */
+    color: var(--background-color);
+    background-color: var(--accent-color);
+}
+::selection {
+    color: var(--background-color);
+    background-color: var(--accent-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-color);
+}
+a {
+    color: var(--accent-color);
+}
+button {
+    background: none;
+    padding: 4px;
+    color: var(--accent-color);
+    cursor: pointer;
+    border-color: var(--accent-color);
+}
+input {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    background: none;
+    width: 40%;
+    height: 20px;
+}
+input:focus {
+    border: 2px solid var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+input::placeholder {
+    color: var(--accent-color);
+    opacity: 0.5;
+}
+#chat {
+    border: 2px solid var(--accent-color);
+    width: 60%;
+    height: 70%;
+    overflow-y: auto;
+}
+#chat * {
+    margin: 10px;
+}
+.incoming_message {
+    border: 2px solid var(--accent-color);
+    height: auto;
+    padding: 10px;
+    word-break: break-word;
+}
+.outcoming_message {
+    border: 2px solid var(--accent-color);
+    height: auto;
+    padding: 10px;
+    word-break: break-word;
+    text-align: right;
+}
+#choose_nickname {
+    border: 2px solid var(--accent-color);
+    width: 60%;
+    height: 100px;
+    text-align: center;
+}
+#choose_nickname h2 {
+    margin-top: 14px;
+}
+#send_message {
+    border: 2px solid var(--accent-color);
+    width: 60%;
+    height: 100px;
+    text-align: center;
+    display: none;
+}
+#send_message h2 {
+    margin-top: 14px;
+}
+#title {
+    border: 2px solid var(--accent-color);
+    width: 60%;
+    height: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+#title * {
+    margin: 2px;
+}
