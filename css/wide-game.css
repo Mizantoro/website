@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background-color: #6c1521;
+}
+::selection {
+    color: white;
+    background-color: #6c1521;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #090909;
+}
+a {
+    margin-bottom: 20px;
+}
+audio {
+    display: none;
+}
+button {
+    border-color: #6c1521;
+    color: #6c1521;
+    width: 160px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+}
+#you_died {
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #6c1521;
+    font-size: 100px;
+    transition: 1s;
+    opacity: 0;
+    font-family: 'Bodoni';
+}
+#game {
+    position: relative;
+    width: 800px;
+    height: 1000px;
+    background-color: #6c1521;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#player {
+    position: absolute;
+    background-image: url("../media/pictures/wide-game/putin/1.png");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 140px;
+    left: 100px;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: transform 0.3s linear;
+    animation: putin 0.8s infinite;
+}
+.obstacle {
+    position: absolute;
+    background-image: url("../media/pictures/wide-game/putin/drone.png");
+    width: 200px;
+    height: 100px;
+    left: 300px;
+    bottom: 100%;
+    transform: translateX(-50%);
+}
+.vodka {
+    position: absolute;
+    background-image: url("../media/pictures/wide-game/putin/vodka.png");
+    width: 200px;
+    height: 100px;
+    left: 300px;
+    bottom: 100%;
+    transform: translateX(-50%);
+}
+#health {
+    width: 800px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    overflow: hidden;
+}
+#health_fill {
+    width: 100%;
+    height: 100%;
+    background-color: #bf1212;
+}
+
+@keyframes putin {
+    0% { background-image: url("../media/pictures/wide-game/putin/1.png"); }
+    33% { background-image: url("../media/pictures/wide-game/putin/2.png"); }
+    66% { background-image: url("../media/pictures/wide-game/putin/3.png"); }
+    100% { background-image: url("../media/pictures/wide-game/putin/2.png"); }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wide</title>
+    <link rel="stylesheet" href="css/wide-game.css">
+    <link rel="icon" href="media/pictures/Meta/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<audio autoplay loop controls id="audio">
+    <source src="media/audio/wide-game/putin.mp3" type="audio/mpeg">
+</audio>
+<h1>Wide Game</h1>
+<p>Website by Mizantoro</p>
+<a href="https://github.com/Mizantoro/website" target="_blank">Source Code</a>
+<h2 id="display_score">Score: 0</h2>
+<div id="you_died">
+    YOU DIED
+    <button onclick="window.location.reload();">RESTART</button>
+</div>
+<div id="game">
+    <div id="player"></div>
+</div>
+<div id="health">
+    <div id="health_fill"></div>
+</div>
+<script src="js/wide-game.js"></script>
+</body>
+</html>
