@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+::selection {
+    background: #5d5e59;
+    color: #fff;
+}
+::-moz-selection {
+    background: #5d5e59;
+    color: #fff;
+}
 body {
     background-image: url('../media/pictures/vinyl/background.jpg');
     background-repeat: no-repeat;
@@ -16,10 +24,12 @@ audio {
 * {
     font-family: 'Fjalla One', sans-serif;
 }
-input {
-    height: 320px;
-    width: 450px;
-    position: fixed;
+#player input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     cursor: pointer;
 }
