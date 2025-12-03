@@ -1,5 +1,6 @@
 const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
 let CraftingItems = [];
+let periodicTableUnlocked = false;
 const Elements = [
     "Hydrogen","Helium","Lithium","Beryllium","Boron",
     "Carbon","Nitrogen","Oxygen","Fluorine","Neon",
@@ -30,6 +31,7 @@ const ElementsCrafted = new Array(118).fill(false);
 
 $('#crafting_table').droppable({
     drop: function(ev, ui) {
+        document.getElementById("crafting_table").style.border = '4px solid #0e0e0e';
         $(ui.draggable)
             .appendTo(this)
             .css({ position: 'absolute' })
@@ -194,7 +196,8 @@ async function Craftable() {
         document.getElementById("button_neutron").style.display = 'block';
     }
     // Deuterium (needed to unlock the periodic table)
-    if (Proton === 1 && Neutron === 1 && UpQuarks === 0 && DownQuarks === 0) {
+    if (Proton === 1 && Neutron === 1 && UpQuarks === 0 && DownQuarks === 0 && !periodicTableUnlocked) {
+        periodicTableUnlocked = true;
         document.getElementById("information").innerHTML = 'You have crafter Deuterium!';
         animateCrafting();
         await delay(1000);
