@@ -11,8 +11,8 @@ let createNewElementTimeOut = 1000;
 let moveTimeOut = 50;
 let health = 5;
 let score = 0;
-let highestScore = 0;
 let playerAlive = true;
+let animationSpeed = 800;
 
 document.addEventListener('keydown', function(event) {
     audio.play();
@@ -122,6 +122,8 @@ async function increaseSpeed() {
         await delay(7500);
         createNewElementTimeOut *= 0.9;
         moveTimeOut *= 0.9;
+        animationSpeed *= 0.9;
+        player.style.animation = `putin ${animationSpeed}ms infinite`;
     }
 }
 
