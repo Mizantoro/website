@@ -100,6 +100,8 @@
 		<button class="button_app_opened" id="system_customization_taskbar" onclick="toggleDiv('system_customization_background')">System_Customization</button>
 		<button class="button_app_opened" id="system_customization_advanced_taskbar" onclick="toggleDiv('system_customization_advanced_background')">Sys_Cust_Advanced</button>
 		<button class="button_app_opened" id="keyboard_background_taskbar" onclick="toggleDiv('keyboard_background')">Keyboard_Player_7000</button>
+		<button class="button_app_opened" id="chat_background_taskbar" onclick="toggleDiv('chat_background')">Chat</button>
+
 		<div id="taskbar_date"></div>
 	</div>
 
@@ -145,13 +147,13 @@
 	</div>
 
 	<!-- FILE LOOKER -->
-	<div class="file_list_background" id="file_list_background">
+	<div class="launch_options_background" id="file_list_background">
 		<div class="file_list_title_bar">
 			File Looker
 			<button class="button_close" onclick="toggleDiv('file_list_background'); toggleDiv('file_list_taskbar')">&#x2715;</button>
 			<button class="button_close" onclick="toggleDiv('file_list_background')">&#45;</button>
 		</div>
-		<div class="file_list_content">
+		<div id="file_list_content">
 			<button class="file_list_button" onclick="toggleDiv('social_media_list_background'); toggleDiv('social_media_list_taskbar')"><img src="media/pictures/StartMenu/AppIcons/social_media.ico" class="file_list_icon">Social_Media_List.txt</button>
 			<button class="file_list_button" onclick="toggleDiv('song_list_background'); toggleDiv('song_list_taskbar')"><img src="media/pictures/StartMenu/AppIcons/social_media.ico" class="file_list_icon">Song_List.txt</button>
 			<button class="file_list_button" onclick="SCP(); toggleDiv('do_not_open_image_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Painting.ico" class="file_list_icon">DO_NOT_OPEN.jpeg</button>
@@ -159,16 +161,17 @@
 	</div>
 
 	<!-- PROGRAM LOADER -->
-	<div class="file_list_background" id="program_loader_background">
+	<div class="launch_options_background" id="program_loader_background">
 		<div class="file_list_title_bar">
 			Program Loader
 			<button class="button_close" onclick="toggleDiv('program_loader_background'); toggleDiv('program_loader_taskbar')">&#x2715;</button>
 			<button class="button_close" onclick="toggleDiv('program_loader_background')">&#45;</button>
 		</div>
-		<div class="file_list_content">
+		<div id="program_loader_content">
 			<button class="file_list_button" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Night_on_computer.ico" class="file_list_icon">System_Customization</button>
 			<button class="file_list_button" onclick="toggleDiv('keyboard_background'); toggleDiv('keyboard_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Music_sheet.ico" class="file_list_icon">Keyboard_Player_7000</button>
 			<button class="file_list_button" onclick="toggleDiv('internet_exploder_window_background'); toggleDiv('internet_exploder_window_taskbar')"><img src="media/pictures/StartMenu/AppIcons/internet_exploder_icon.png" class="file_list_icon">Internet_Exploder.exe</button>
+			<button class="file_list_button" onclick="toggleDiv('chat_background'); toggleDiv('chat_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/chat.ico" class="file_list_icon">Chat.exe</button>
 		</div>
 	</div>
 
@@ -400,6 +403,17 @@
 			<button class="keyboard_black_key" onclick="playNote('As4')">A&#9839;<br>B&#9837;</button>
 			<button class="keyboard_white_key" onclick="playNote('B4')">B</button>
 			<button class="keyboard_white_key" onclick="playNote('C5')">C</button>
+		</div>
+	</div>
+
+	<div class="window_background" id="chat_background">
+		<div class="window_title_bar" id="chat_title_bar">
+			Chat.exe
+			<button class="button_close" onclick="toggleDiv('chat_background'); toggleDiv('chat_background_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('chat_background')">&#45;</button>
+		</div>
+		<div class="window_content" id="chat_content">
+			<iframe src="chat.html" width="600" height="800"></iframe>
 		</div>
 	</div>
 

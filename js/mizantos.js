@@ -40,10 +40,10 @@ async function SCP() {
 
 // draggable windows
 $(document).ready(function () {
-	$(".window_background").draggable({ handle: ".window_title_bar" });
-	$(".social_media_list_background").draggable({ handle: ".social_media_list_title_bar" });
-	$(".file_list_background").draggable({ handle: ".file_list_title_bar" });
-	$(".explode_da_internet_warning_window_background").draggable({ handle: ".internet_exploder_warning_title_bar" });
+	$(".window_background").draggable({ handle: ".window_title_bar", stack: "div" });
+	$(".social_media_list_background").draggable({ handle: ".social_media_list_title_bar", stack: "div" });
+	$(".launch_options_background").draggable({ handle: ".file_list_title_bar", stack: "div" });
+	$(".explode_da_internet_warning_window_background").draggable({ handle: ".internet_exploder_warning_title_bar", stack: "div" });
 });
 
 // red screen of death
