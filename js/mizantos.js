@@ -151,6 +151,9 @@ async function ExplodeDaInternet() {
 	document.getElementById("explode_da_internet_map").src="media/pictures/InternetExploder/earth_lights_6.png";
 	await delay(2000);
 	document.getElementById("explode_da_internet_map").src="media/pictures/InternetExploder/earth_lights_7.png";
+	browser.src = "";
+	browser.style.display = "none";
+	document.getElementById("browser_error_message").style.display = "inline-block";
 	toggleDiv('internet_has_been_exploded')
 }
 
@@ -204,3 +207,14 @@ async function changeColor(color, target) {
 async function changeBrowserURL(newURL) {
 	browser.src = newURL;
 }
+
+document.getElementById("website_address_submit").addEventListener("click", async () => {
+	url = document.getElementById("website_address_input").value;
+	if (url === "") {
+		return;
+	}
+	if (!url.includes("https://")) {
+		url = "https://" + url;
+	}
+	changeBrowserURL(url);
+})

@@ -429,7 +429,14 @@
 		</div>
 		<div id="browser_toolbar">
 			<button onclick="changeBrowserURL('https://wiby.org/')">Home</button>
+			<button onclick="changeBrowserURL('https://wikipedia.org/')">Wikipedia</button>
+			<button onclick="changeBrowserURL('https://cpp.sh/')">C++ shell</button>
+			<button onclick="changeBrowserURL('https://classic.minecraft.net/')">Minecraft</button>
+			https://
+			<input type="text" id="website_address_input" placeholder="Enter a website address...">
+			<button id="website_address_submit">Go</button>
 		</div>
+		<h2 id="browser_error_message">error: no internet connection</h2>
 		<iframe id="browser" src="https://wiby.org/" width="800" height="800"></iframe>
 	</div>
 

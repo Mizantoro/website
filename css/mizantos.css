@@ -739,3 +739,9 @@ iframe {
 #browser_toolbar button {
 	background: transparent;
 }
+#website_address_input {
+	width: 200px;
+}
+#browser_error_message {
+	display: none;
+}
