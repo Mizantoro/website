@@ -113,6 +113,20 @@ window.onload = async function () {
 	redScreenOfDeath();
 	displayDate();
 	setInterval(displayDate, 100);
+	readSystemInfo()
+}
+
+async function readSystemInfo() {
+	document.getElementById("information_content").innerHTML += "<p>" +
+		"CPU Cores: " + navigator.hardwareConcurrency + "<br>" +
+		"Memory: " + navigator.deviceMemory + " GB<br>" +
+		"Resolution: " + window.screen.width + " x " + window.screen.height + "<br>" +
+		"Time zone: " + Intl.DateTimeFormat().resolvedOptions().timeZone + "<br>" +
+		"Online: " + navigator.onLine + "<br>" +
+		"Connection type: " + (navigator.connection?.effectiveType ?? "N/A") + "<br>" +
+		"Download: " + (navigator.connection?.downlink ?? "N/A") + " Mb/s<br>" +
+		"Ping: " + (navigator.connection?.rtt ?? "N/A") + " ms<br>" +
+		"</p>";
 }
 
 async function displayDate () {

@@ -103,6 +103,7 @@
 		<button class="button_app_opened" id="chat_background_taskbar" onclick="toggleDiv('chat_background')">Chat</button>
 		<button class="button_app_opened" id="browser_background_taskbar" onclick="toggleDiv('browser_background')">www_Access</button>
 		<button class="button_app_opened" id="emulator_background_taskbar" onclick="toggleDiv('emulator_background')">Virtual Machine</button>
+		<button class="button_app_opened" id="information_background_taskbar" onclick="toggleDiv('information_background')">System Information</button>
 
 		<div id="taskbar_date"></div>
 	</div>
@@ -176,6 +177,7 @@
 			<button class="file_list_button" onclick="toggleDiv('chat_background'); toggleDiv('chat_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/chat.ico" class="file_list_icon">Chat.exe</button>
 			<button class="file_list_button" onclick="toggleDiv('browser_background'); toggleDiv('browser_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/browser.ico" class="file_list_icon">www_Access.exe</button>
 			<button class="file_list_button" onclick="toggleDiv('emulator_background'); toggleDiv('emulator_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/emulator.ico" class="file_list_icon">Virtual_Machine.exe</button>
+			<button class="file_list_button" onclick="toggleDiv('information_background'); toggleDiv('information_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/information.ico" class="file_list_icon">System_Information</button>
 		</div>
 	</div>
 
@@ -451,6 +453,16 @@
 		</div>
 		<button id="turn_on_vm_button" onclick="turnOnVirtualMachine()">Turn on Virtual Machine</button>
 		<iframe id="emulator" src="" width="1000" height="800"></iframe>
+	</div>
+
+	<!-- SYSTEM INFORMATION -->
+	<div class="window_background" id="information_background">
+		<div class="window_title_bar" id="information_title_bar">
+			System_Information.exe
+			<button class="button_close" onclick="toggleDiv('information_background'); toggleDiv('information_background_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('information_background')">&#45;</button>
+		</div>
+		<div class="window_content" id="information_content"></div>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
