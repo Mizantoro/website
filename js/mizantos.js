@@ -218,3 +218,10 @@ document.getElementById("website_address_submit").addEventListener("click", asyn
 	}
 	changeBrowserURL(url);
 })
+
+async function turnOnVirtualMachine() {
+	const machine = document.getElementById("emulator");
+	machine.src = "mizantos.html";
+	machine.style.display = "inline-block";
+	document.getElementById("turn_on_vm_button").style.display = "none";
+}

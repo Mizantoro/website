@@ -102,6 +102,7 @@
 		<button class="button_app_opened" id="keyboard_background_taskbar" onclick="toggleDiv('keyboard_background')">Keyboard_Player_7000</button>
 		<button class="button_app_opened" id="chat_background_taskbar" onclick="toggleDiv('chat_background')">Chat</button>
 		<button class="button_app_opened" id="browser_background_taskbar" onclick="toggleDiv('browser_background')">www_Access</button>
+		<button class="button_app_opened" id="emulator_background_taskbar" onclick="toggleDiv('emulator_background')">Virtual Machine</button>
 
 		<div id="taskbar_date"></div>
 	</div>
@@ -174,6 +175,7 @@
 			<button class="file_list_button" onclick="toggleDiv('internet_exploder_window_background'); toggleDiv('internet_exploder_window_taskbar')"><img src="media/pictures/StartMenu/AppIcons/internet_exploder_icon.png" class="file_list_icon">Internet_Exploder.exe</button>
 			<button class="file_list_button" onclick="toggleDiv('chat_background'); toggleDiv('chat_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/chat.ico" class="file_list_icon">Chat.exe</button>
 			<button class="file_list_button" onclick="toggleDiv('browser_background'); toggleDiv('browser_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/browser.ico" class="file_list_icon">www_Access.exe</button>
+			<button class="file_list_button" onclick="toggleDiv('emulator_background'); toggleDiv('emulator_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/emulator.ico" class="file_list_icon">Virtual_Machine.exe</button>
 		</div>
 	</div>
 
@@ -438,6 +440,17 @@
 		</div>
 		<h2 id="browser_error_message">error: no internet connection</h2>
 		<iframe id="browser" src="https://wiby.org/" width="800" height="800"></iframe>
+	</div>
+
+	<!-- EMULATOR -->
+	<div class="window_background" id="emulator_background">
+		<div class="window_title_bar" id="emulator_title_bar">
+			Virtual_Machine.exe
+			<button class="button_close" onclick="toggleDiv('emulator_background'); toggleDiv('emulator_background_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('emulator_background')">&#45;</button>
+		</div>
+		<button id="turn_on_vm_button" onclick="turnOnVirtualMachine()">Turn on Virtual Machine</button>
+		<iframe id="emulator" src="" width="1000" height="800"></iframe>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
