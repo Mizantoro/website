@@ -1,4 +1,5 @@
 const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
+const browser = document.getElementById("browser");
 
 function toggleDiv(id) {
 	let div = document.getElementById(id);
@@ -198,4 +199,8 @@ async function changeColor(color, target) {
 		document.getElementById('profile_picture').src = 'media/pictures/anime/anime-profile.png';
 		document.getElementById('profile_idiot_text').innerHTML = 'UwU';
 	}
+}
+
+async function changeBrowserURL(newURL) {
+	browser.src = newURL;
 }

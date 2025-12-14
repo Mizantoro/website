@@ -321,7 +321,7 @@ iframe {
 #program_loader_background {
 	background-color: var(--background-color);
 	width: 200px;
-	height: 170px;
+	height: 200px;
 	display: inline-block;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 	position: absolute;
@@ -334,7 +334,7 @@ iframe {
 	padding-top: 4px;
 	background-color: var(--content-color);
 	width: 188px;
-	height: 124px;
+	height: 154px;
 	margin-left: 4px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -722,4 +722,20 @@ iframe {
 	font-size: 20px;
 	width: 600px;
 	height: 800px;
+}
+/* BROWSER */
+#browser_background {
+	width: 800px;
+	height: 858px;
+}
+#browser_title_bar {
+	width: 792px;
+}
+#browser_toolbar {
+	margin-bottom: 4px;
+	width: 792px;
+	height: 20px;
+}
+#browser_toolbar button {
+	background: transparent;
 }

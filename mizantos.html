@@ -101,6 +101,7 @@
 		<button class="button_app_opened" id="system_customization_advanced_taskbar" onclick="toggleDiv('system_customization_advanced_background')">Sys_Cust_Advanced</button>
 		<button class="button_app_opened" id="keyboard_background_taskbar" onclick="toggleDiv('keyboard_background')">Keyboard_Player_7000</button>
 		<button class="button_app_opened" id="chat_background_taskbar" onclick="toggleDiv('chat_background')">Chat</button>
+		<button class="button_app_opened" id="browser_background_taskbar" onclick="toggleDiv('browser_background')">www_Access</button>
 
 		<div id="taskbar_date"></div>
 	</div>
@@ -172,6 +173,7 @@
 			<button class="file_list_button" onclick="toggleDiv('keyboard_background'); toggleDiv('keyboard_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/Music_sheet.ico" class="file_list_icon">Keyboard_Player_7000</button>
 			<button class="file_list_button" onclick="toggleDiv('internet_exploder_window_background'); toggleDiv('internet_exploder_window_taskbar')"><img src="media/pictures/StartMenu/AppIcons/internet_exploder_icon.png" class="file_list_icon">Internet_Exploder.exe</button>
 			<button class="file_list_button" onclick="toggleDiv('chat_background'); toggleDiv('chat_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/chat.ico" class="file_list_icon">Chat.exe</button>
+			<button class="file_list_button" onclick="toggleDiv('browser_background'); toggleDiv('browser_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/browser.ico" class="file_list_icon">www_Access.exe</button>
 		</div>
 	</div>
 
@@ -406,6 +408,7 @@
 		</div>
 	</div>
 
+	<!-- CHAT -->
 	<div class="window_background" id="chat_background">
 		<div class="window_title_bar" id="chat_title_bar">
 			Chat.exe
@@ -415,6 +418,19 @@
 		<div class="window_content" id="chat_content">
 			<iframe src="chat.html" width="600" height="800"></iframe>
 		</div>
+	</div>
+
+	<!-- BROWSER -->
+	<div class="window_background" id="browser_background">
+		<div class="window_title_bar" id="browser_title_bar">
+			www_Access.exe
+			<button class="button_close" onclick="toggleDiv('browser_background'); toggleDiv('browser_background_taskbar')">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('browser_background')">&#45;</button>
+		</div>
+		<div id="browser_toolbar">
+			<button onclick="changeBrowserURL('https://wiby.org/')">Home</button>
+		</div>
+		<iframe id="browser" src="https://wiby.org/" width="800" height="800"></iframe>
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
