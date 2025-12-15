@@ -465,7 +465,19 @@
 		<div class="window_content" id="information_content"></div>
 	</div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- CONTEXT MENU -->
+	<div class="window_background" id="context_menu_background">
+		<div class="window_content" id="context_menu_content">
+			<button class="context_menu_button" onclick="copySelectedText()">Copy</button>
+			<button class="context_menu_button" onclick="pasteFromClipboard()">Paste</button>
+			<button class="context_menu_button" onclick="toggleDiv('file_list_background'); toggleDiv('file_list_taskbar')">File Looker</button>
+			<button class="context_menu_button" onclick="toggleDiv('program_loader_background'); toggleDiv('program_loader_taskbar')">Program Loader</button>
+			<button class="context_menu_button" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')">Customize System</button>
+			<button class="context_menu_button" onclick="toggleDiv('information_background'); toggleDiv('information_background_taskbar')">System Information</button>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="js/mizantos.js"></script>
 </body>

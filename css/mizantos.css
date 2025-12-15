@@ -777,3 +777,27 @@ iframe {
 	width: 224px;
 	height: 170px;
 }
+/* CONTEXT MENU */
+#context_menu_background {
+	position: fixed;
+	z-index: 2147483647; /* max int */
+	width: 180px;
+	height: 184px;
+}
+#context_menu_content {
+	font-size: 20px;
+	width: 172px;
+	height: 176px;
+}
+.context_menu_button {
+	width: 172px;
+	height: 26px;
+	display: flex;
+	border-radius: 0;
+	background-color: var(--background-color);
+	text-align: left;
+	font-size: 18px;
+	align-items: center;
+	gap: 4px;
+	margin-bottom: 4px;
+}

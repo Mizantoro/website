@@ -1,5 +1,6 @@
 const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
 const browser = document.getElementById("browser");
+const newContextMenu = document.getElementById("context_menu_background");
 
 function toggleDiv(id) {
 	let div = document.getElementById(id);
@@ -238,4 +239,28 @@ async function turnOnVirtualMachine() {
 	machine.src = "mizantos.html";
 	machine.style.display = "inline-block";
 	document.getElementById("turn_on_vm_button").style.display = "none";
+}
+
+document.addEventListener('contextmenu', function(e) {
+	e.preventDefault();
+
+	newContextMenu.style.display = "block";
+	newContextMenu.style.left = e.pageX + 'px';
+	newContextMenu.style.top = e.pageY + 'px';
+	newContextMenu.style.zIndex = 2147483647; // max int, will ensure that the context menu is on top
+});
+
+document.addEventListener('click', function(){
+	newContextMenu.style.display = "none";
+})
+
+function copySelectedText() {
+	navigator.clipboard.writeText(window.getSelection().toString());
+}
+
+async function pasteFromClipboard() { // chatGPT
+	const el = document.activeElement;
+	if (el?.value !== undefined) {
+		el.value = await navigator.clipboard.readText();
+	}
 }
