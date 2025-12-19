@@ -264,3 +264,89 @@ async function pasteFromClipboard() { // chatGPT
 		el.value = await navigator.clipboard.readText();
 	}
 }
+
+async function youAreAnIdiot() {
+	document.addEventListener('click', createNewIdiotElement);
+}
+
+async function createNewIdiotElement() {
+	// The following code was created mostly by ChatGPT.
+	// I created the template for how the window should look like.
+	// The code behind window movement and bouncing was also AI-generated,
+	// since it is to tedious to code by hand (it is 1AM).
+	// The template:
+	//
+	// <div class="you_are_an_idiot">
+	// 	<div class="you_are_an_idiot_title_bar">
+	// 		YOU ARE AN IDIOT
+	// 		<button class="button_close">&#x2715;</button>
+	// 		<button class="button_close">&#45;</button>
+	// 	</div>
+	// 	<div class="you_are_an_idiot_content">
+	// 		<img src="media/pictures/youareanidiot/2.gif" alt="youareanidiot">
+	// 	</div>
+	// </div>
+	//
+	// The the main gif and audio was downloaded from this GitHub repository (19 dec 2025):
+	// https://github.com/Hantalyte/YouAreAnIdiot
+
+	const el = document.createElement('div');
+	el.className = "you_are_an_idiot";
+
+	const titleBar = document.createElement('div');
+	titleBar.className = "you_are_an_idiot_title_bar";
+	titleBar.textContent = "YOU ARE AN IDIOT";
+
+	const btnClose = document.createElement('button');
+	btnClose.className = "button_close";
+	btnClose.innerHTML = "&#x2715;";
+
+	const btnMin = document.createElement('button');
+	btnMin.className = "button_close";
+	btnMin.innerHTML = "&#45;";
+
+	const content = document.createElement('div');
+	content.className = "you_are_an_idiot_content";
+
+	const img = document.createElement('img');
+	img.src = "media/pictures/youareanidiot/1.gif";
+	img.alt = "youareanidiot";
+
+	const audio = new Audio('media/audio/youareanidiot.mp3');
+	audio.loop = true;
+	audio.play();
+
+	titleBar.appendChild(btnClose);
+	titleBar.appendChild(btnMin);
+	content.appendChild(img);
+	el.appendChild(titleBar);
+	el.appendChild(content);
+
+	document.body.appendChild(el);
+
+	let x = 100;
+	let y = 100;
+	let dx = 3;
+	let dy = 2;
+
+	function moveDiv() {
+		const divWidth = el.offsetWidth;
+		const divHeight = el.offsetHeight;
+		const windowWidth = window.innerWidth;
+		const windowHeight = window.innerHeight;
+
+		x += dx;
+		y += dy;
+
+		if (x + divWidth >= windowWidth || x <= 0) dx = -dx;
+		if (y + divHeight >= windowHeight || y <= 0) dy = -dy;
+
+		el.style.left = x + 'px';
+		el.style.top = y + 'px';
+
+		requestAnimationFrame(moveDiv);
+	}
+	moveDiv();
+}
+
+
