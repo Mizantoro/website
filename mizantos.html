@@ -104,6 +104,7 @@
 		<button class="button_app_opened" id="browser_background_taskbar" onclick="toggleDiv('browser_background')">www_Access</button>
 		<button class="button_app_opened" id="emulator_background_taskbar" onclick="toggleDiv('emulator_background')">Virtual Machine</button>
 		<button class="button_app_opened" id="information_background_taskbar" onclick="toggleDiv('information_background')">System Information</button>
+		<button class="button_app_opened" id="metronome_background_taskbar" onclick="toggleDiv('metronome_background')">Metronome</button>
 
 		<div id="taskbar_date"></div>
 	</div>
@@ -179,6 +180,7 @@
 			<button class="file_list_button" onclick="toggleDiv('emulator_background'); toggleDiv('emulator_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/emulator.ico" class="file_list_icon">Virtual_Machine.exe</button>
 			<button class="file_list_button" onclick="toggleDiv('information_background'); toggleDiv('information_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/information.ico" class="file_list_icon">System_Information</button>
 			<button class="file_list_button" onclick="youAreAnIdiot()"><img src="media/pictures/StartMenu/AppIcons/ram.ico" class="file_list_icon">Ram_Downloader.exe</button>
+			<button class="file_list_button" onclick="toggleDiv('metronome_background'); toggleDiv('metronome_background_taskbar')"><img src="media/pictures/StartMenu/AppIcons/metronome.ico" class="file_list_icon">Metronome.exe</button>
 		</div>
 	</div>
 
@@ -475,6 +477,20 @@
 			<button class="context_menu_button" onclick="toggleDiv('program_loader_background'); toggleDiv('program_loader_taskbar')">Program Loader</button>
 			<button class="context_menu_button" onclick="toggleDiv('system_customization_background'); toggleDiv('system_customization_taskbar')">Customize System</button>
 			<button class="context_menu_button" onclick="toggleDiv('information_background'); toggleDiv('information_background_taskbar')">System Information</button>
+		</div>
+	</div>
+
+	<!-- METRONOME -->
+	<div class="window_background" id="metronome_background">
+		<div class="window_title_bar" id="metronome_title_bar">
+			Metronome.exe
+			<button class="button_close" onclick="toggleDiv('metronome_background'); toggleDiv('metronome_background_taskbar'); stopMetronome()">&#x2715;</button>
+			<button class="button_close" onclick="toggleDiv('metronome_background')">&#45;</button>
+		</div>
+		<div class="window_content" id="metronome_content">
+			<input type="number" id="metronome_input" placeholder="Enter tempo..." min="1" value="100">
+			<button type="submit" id="metronome_submit_tempo">Submit</button>
+			<button id="metronome_start">Start / Stop</button>
 		</div>
 	</div>
 

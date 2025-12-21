@@ -1,6 +1,8 @@
 const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
 const browser = document.getElementById("browser");
 const newContextMenu = document.getElementById("context_menu_background");
+let metronomeTempo = 100;
+let metronomeRunning = false;
 
 function toggleDiv(id) {
 	let div = document.getElementById(id);
@@ -349,4 +351,24 @@ async function createNewIdiotElement() {
 	moveDiv();
 }
 
+async function playMetronome() {
+	const audio = new Audio('media/audio/metronome/metronome.mp3');
+	while(metronomeRunning) {
+		audio.currentTime = 0;
+		audio.play();
+		await delay(60000 / metronomeTempo);
+	}
+}
 
+document.getElementById("metronome_submit_tempo").addEventListener('click', () => {
+	metronomeTempo = document.getElementById("metronome_input").value;
+});
+
+document.getElementById("metronome_start").addEventListener('click', async function() {
+	metronomeRunning = !metronomeRunning;
+	playMetronome();
+});
+
+async function stopMetronome() {
+	metronomeRunning = false;
+}
