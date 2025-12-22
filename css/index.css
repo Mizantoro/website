@@ -147,6 +147,9 @@ button {
 #wide_game_project:hover {
     box-shadow: 4px 4px 12px #4e0e11;
 }
+#e_project:hover {
+    box-shadow: 4px 4px 12px #4a4a37;
+}
 #social_media {
     display: flex;
     flex-direction: column;
