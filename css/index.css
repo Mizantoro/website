@@ -27,6 +27,9 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
 }
+a {
+    cursor: pointer;
+}
 p {
     font-size: 30px;
 }
@@ -51,7 +54,7 @@ button {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 200px;
+    height: 240px;
     text-align: center;
     margin: 0;
     padding: 10px;
