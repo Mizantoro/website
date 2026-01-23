@@ -153,6 +153,9 @@ button {
 #e_project:hover {
     box-shadow: 4px 4px 12px #4a4a37;
 }
+#e_project:hover {
+    box-shadow: 4px 4px 12px #e6d5c4;
+}
 #social_media {
     display: flex;
     flex-direction: column;

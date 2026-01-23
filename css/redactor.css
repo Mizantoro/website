@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background-color: #7d7061;
+}
+::selection {
+    color: white;
+    background-color: #7d7061;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Special Elite', cursive;
+}
+body {
+    background-image: url("../media/pictures/redactor/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+a {
+    color: black;
+}
+input {
+    width: min(100%, 600px);
+    height: 80px;
+    background: #7d7061;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+input::placeholder {
+    text-align: center;
+    color: white;
+}
+button {
+    margin-top: 10px;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7d7061;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+#output {
+    width: min(100%, 600px);
+    word-break: break-word;
+    background: #e6d5c4;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    display: none;
+}
