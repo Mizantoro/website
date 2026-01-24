@@ -63,6 +63,7 @@ audio {
     border-radius: 15px;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
     transform: rotate(-3deg);
+    user-select: none;
 }
 #disk_place {
     width: 180px;
@@ -169,18 +170,43 @@ audio {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-@media(max-width: 600px) {
+
+/*Legacy optimization*/
+/*@media(max-width: 600px) {*/
+/*    body {*/
+/*        overflow-x: hidden;*/
+/*    }*/
+/*    #player {*/
+/*        top: 500px;*/
+/*        left: 0px;*/
+/*    }*/
+/*    #container {*/
+/*        left: 0;*/
+/*        top: 1000px;*/
+/*        scale: 0.6;*/
+/*        margin-left: 0*/
+/*    }*/
+/*}*/
+
+@media (max-width: 768px) {
     body {
         overflow-x: hidden;
     }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+        max-width: 100%;
+    }
     #player {
-        top: 500px;
-        left: 0px;
+        scale: 0.5;
+        left: -20%;
+        top: 100px;
     }
     #container {
-        left: 0;
-        top: 1000px;
-        scale: 0.6;
-        margin-left: 0
+        left: -45%;
+        top: 400px;
+        scale: 0.5;
     }
 }
