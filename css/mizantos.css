@@ -255,6 +255,15 @@ iframe {
 	width: 60px;
 	font-size: 20px;
 }
+#start_menu_restart_button {
+    margin-left: 4px;
+    margin-top: 4px;
+    height: 34px;
+    width: auto;
+    font-size: 20px;
+    float: right;
+    margin-right: 4px;
+}
 /* START MENU ABOUT WINDOW */
 #about_start_menu_background {
 	height: 396px;
