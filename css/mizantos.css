@@ -861,3 +861,34 @@ iframe {
 	width: 142px;
 	margin-top: 4px;
 }
+/* MOBILE WARNING */
+#mobile_warning {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    padding: 10px;
+    display: none;
+}
+#mobile_warning h2 {
+    font-size: 40px;
+}
+#mobile_warning p {
+    font-size: 20px;
+}
+#mobile_warning button {
+    width: 140px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    #mobile_warning {
+        display: flex;
+    }
+}

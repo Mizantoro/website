@@ -54,6 +54,16 @@
 		<source src="media/audio/keyboard/C5.mp3" type="audio/mpeg">
 	</audio>
 
+    <div id="mobile_warning">
+        <h2>Warning: this website is optimized for desktop view!</h2>
+        <p>
+            You can still use this website on your mobile device,<br>
+            however, the experience is going to be worse.<br>
+            The website is supposed to emulate an old operating system.
+        </p>
+        <button onclick="toggleDiv('mobile_warning')">Close</button>
+    </div>
+
 	<!-- TERMINAL -->
 	<div id="terminal_background"></div>
 
@@ -496,6 +506,8 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- https://stackoverflow.com/questions/3172100/html-drag-and-drop-on-mobile-devices -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script src="js/mizantos.js"></script>
 </body>
 </html>
