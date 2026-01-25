@@ -21,8 +21,8 @@ body {
     flex-direction: column;
 }
 html, body {
-    height: 100%;   /* pełna wysokość */
-    margin: 0;      /* brak marginesów */
+    height: 100%;
+    margin: 0;
 }
 button {
     cursor: pointer;
@@ -40,7 +40,6 @@ button {
 #information {
     opacity: 0;
     transition: 300ms;
-    top: 0;
     top: 80px;
 }
 #god_mode_button {
@@ -73,7 +72,7 @@ button {
     padding: 20px;
     border-width: 4px;
     border-style: dashed;
-    border-color: #0e0e0e;
+    border-color: #333232;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,16 +80,17 @@ button {
 }
 #crafting_table p{
     position: absolute;
-    color: #322f2f;
+    color: #333232;
 }
 #crafting_button {
     width: 350px;
     height: 80px;
     border-width: 4px;
     border-style: solid;
-    border-color: #0e0e0e;
-    color: #322f2f;
+    border-color: #333232;
+    color: #333232;
     transition: 300ms;
+    border-radius: 0;
 }
 #crafting_button:hover:enabled {
     color: #ffffff;
@@ -104,7 +104,7 @@ button {
 /* ELEMENTS */
 /* QUARKS */
 .up_quark {
-    top: 50px;
+    top: 10px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -123,7 +123,7 @@ button {
     cursor: grabbing;
 }
 .down_quark {
-    top: 50px;
+    top: 10px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ button {
 
 /* LARGER SHIT */
 .proton {
-    top: 100px;
+    top: 10px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -163,7 +163,7 @@ button {
     cursor: grabbing;
 }
 .neutron {
-    top: 100px;
+    top: 10px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -375,6 +375,21 @@ button {
     display: none;
     border-color: #ffffff;
 }
+#mobile_warning {
+    background: #050505;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+#mobile_warning h2 {
+    transform: rotate(90deg);
+    font-size: 30px;
+}
 
 @media(max-width: 1800px) {
     #periodic_table {
@@ -411,5 +426,79 @@ button {
     }
     #periodic_table_f_block a {
         font-size: 8px;
+    }
+}
+
+/* MOBILE DEVICES */
+@media (max-height: 500px) and (orientation: landscape) {
+    #periodic_table_container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    #h2_periodic_table {
+        position: absolute;
+        top: 0;
+    }
+    #periodic_table {
+        grid-template-columns: repeat(18, 32px);
+        grid-template-rows: repeat(7, 32px);
+        margin-bottom: 4px;
+        gap: 4px;
+    }
+    #periodic_table div {
+        padding: 2px;
+    }
+    #periodic_table h2{
+        font-size: 8px;
+    }
+    #periodic_table p {
+        font-size: 6px;
+        margin: 0;
+    }
+    #periodic_table a {
+        font-size: 4px;
+    }
+    #periodic_table_f_block {
+        grid-template-columns: repeat(15, 32px);
+        grid-template-rows: repeat(2, 32px);
+        margin-top: 0;
+        gap: 4px;
+    }
+    #periodic_table_f_block h2 {
+        font-size: 8px;
+    }
+    #periodic_table_f_block p {
+        font-size: 6px;
+    }
+    #periodic_table_f_block a {
+        font-size: 4px;
+    }
+    #periodic_table_f_block div {
+        padding: 2px;
+    }
+    #crafting_button {
+        height: 40px;
+        width: 168px;
+    }
+    #crafting_table {
+        width: 120px;
+        height: 120px;
+    }
+    #information {
+        font-size: 20px;
+        margin: 4px;
+    }
+    #menu button {
+        width: 80px;
+    }
+    .credit {
+        font-size: 10px;
+    }
+}
+@media(max-width: 768px) {
+    #mobile_warning {
+        display: flex;
     }
 }

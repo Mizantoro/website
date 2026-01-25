@@ -31,7 +31,7 @@ const ElementsCrafted = new Array(118).fill(false);
 
 $('#crafting_table').droppable({
     drop: function(ev, ui) {
-        document.getElementById("crafting_table").style.border = '4px solid #0e0e0e';
+        document.getElementById("crafting_table").style.border = '4px solid #333232';
         $(ui.draggable)
             .appendTo(this)
             .css({ position: 'absolute' })
@@ -98,7 +98,7 @@ async function resetCrafting() {
     document.querySelectorAll('.neutron').forEach(el => el.remove());
     CraftingItems = [];
 
-    document.getElementById('crafting_table').style.border = '4px dashed #0e0e0e';
+    document.getElementById('crafting_table').style.border = '4px dashed #333232';
     document.getElementById("crafting_button").disabled = true;
 }
 
@@ -109,7 +109,7 @@ async function animateCrafting() {
     document.getElementById("crafting_table").style.border = '4px solid white';
     await delay(1000);
     document.getElementById("information").style.opacity = '0';
-    document.getElementById("crafting_table").style.border = '4px dashed #0e0e0e';
+    document.getElementById("crafting_table").style.border = '4px dashed #333232';
 }
 
 async function elementCategory(AtomicNumber) { // Kill me
