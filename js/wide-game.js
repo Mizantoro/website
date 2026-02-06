@@ -19,13 +19,13 @@ document.addEventListener('keydown', function(event) {
     if (!playerAlive) {
         return;
     }
-    if (event.key === 'a') {
+    if (event.key === 'a' || event.key === "ArrowLeft") {
         if (playerPositionLeft <= 100) {
             return;
         }
         playerPositionLeft -= 200;
     }
-    if (event.key === 'd') {
+    if (event.key === 'd' || event.key === "ArrowRight") {
         if (playerPositionLeft >= 600) {
             return;
         }
