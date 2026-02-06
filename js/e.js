@@ -86,3 +86,7 @@ function downloadURI()
     link.href = "media/pictures/E/E.jpg";
     link.click();
 }
+
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
