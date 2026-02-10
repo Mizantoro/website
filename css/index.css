@@ -156,6 +156,9 @@ button {
 #e_project:hover {
     box-shadow: 4px 4px 12px #e6d5c4;
 }
+#pendulum_project:hover {
+    box-shadow: 4px 4px 12px #574134;
+}
 #social_media {
     display: flex;
     flex-direction: column;
