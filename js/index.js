@@ -1,47 +1,5 @@
 const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
 let eyeTouched = 0;
-
-async function switchTheme() {
-    const root = document.documentElement;
-    if (getComputedStyle(root).getPropertyValue('--background-color').trim()==="#090909") {
-        root.style.setProperty('--background-color', '#FFFAFA');
-        root.style.setProperty('--background-color-higher', '#ededed');
-        root.style.setProperty('--text-color', 'black');
-        document.getElementById("theme_toggle_img").src="media/pictures/index/ico/night.svg";
-    }
-    else {
-        root.style.setProperty('--background-color', '#090909');
-        root.style.setProperty('--background-color-higher', '#121212');
-        root.style.setProperty('--text-color', '#fff');
-        document.getElementById("theme_toggle_img").src="media/pictures/index/ico/day.svg";
-    }
-}
-
-window.addEventListener("scroll", async function scroll() {
-    const scrollTop = window.scrollY;
-    if (scrollTop >= 1200) {
-        document.getElementById("eye_container").style.left = "20px";
-        await delay(4000);
-        document.getElementById("dialogue_text").style.opacity = "1";
-        document.getElementById("eye_button_container").style.opacity = "1";
-        window.removeEventListener("scroll", scroll);
-        renderDialogues("start");
-    }
-});
-
-window.onload = async function () {
-    const data = new FormData();
-    data.append("views", "1");
-    fetch("php/index.php", {
-        method: "POST",
-        body: data
-    })
-        .then(response => response.text())
-        .then(text => {
-            document.getElementById("views").innerHTML = text;
-        })
-}
-
 let dialogues = {
     start: {
         text: "What do you seek, my child?",
@@ -70,7 +28,7 @@ let dialogues = {
             { text: "Go home", next: "start" }
         ]
     },
-    
+
     "power-over-others": {
         text: `
             So you seek dominance over people around you.
@@ -220,6 +178,73 @@ let dialogues = {
     }
 };
 
+async function setDefaultTheme() {
+    document.getElementById("mizantoro_net").innerHTML = "mizantoro.net";
+    document.getElementById("welcome").style.backgroundImage="url(media/pictures/index/background/background.png)";
+    document.getElementById("welcome").style.backgroundColor="none";
+    const allElements = document.querySelectorAll("*");
+    allElements.forEach(el => {
+        el.style.fontFamily = "'Lexend', sans-serif";
+    });
+    document.getElementById("dialogue_text").style.fontFamily = "'Special Elite', cursive";
+}
+
+async function switchTheme() {
+    setDefaultTheme();
+    const root = document.documentElement;
+    if (getComputedStyle(root).getPropertyValue('--background-color').trim()==="#090909") {
+        root.style.setProperty('--background-color', '#FFFAFA');
+        root.style.setProperty('--background-color-higher', '#ededed');
+        root.style.setProperty('--text-color', 'black');
+        document.getElementById("theme_toggle_img").src="media/pictures/index/ico/night.svg";
+    }
+    else {
+        root.style.setProperty('--background-color', '#090909');
+        root.style.setProperty('--background-color-higher', '#121212');
+        root.style.setProperty('--text-color', '#fff');
+        document.getElementById("theme_toggle_img").src="media/pictures/index/ico/day.svg";
+    }
+}
+
+async function specialTheme() {
+    const root = document.documentElement;
+    root.style.setProperty('--background-color', '#3e4637');
+    root.style.setProperty('--background-color-higher', '#4c5844');
+    root.style.setProperty('--text-color', '#fff');
+    document.getElementById("welcome").style.backgroundImage="none";
+    document.getElementById("welcome").style.backgroundColor="#4c5844";
+    const allElements = document.querySelectorAll("*");
+    allElements.forEach(el => {
+        el.style.fontFamily = "Tahoma, sans-serif";
+    });
+    document.getElementById("mizantoro_net").innerHTML = "mizantoropowered.net";
+}
+
+window.addEventListener("scroll", async function scroll() {
+    const scrollTop = window.scrollY;
+    if (scrollTop >= 1200) {
+        document.getElementById("eye_container").style.left = "20px";
+        await delay(4000);
+        document.getElementById("dialogue_text").style.opacity = "1";
+        document.getElementById("eye_button_container").style.opacity = "1";
+        window.removeEventListener("scroll", scroll);
+        renderDialogues("start");
+    }
+});
+
+window.onload = async function () {
+    const data = new FormData();
+    data.append("views", "1");
+    fetch("php/index.php", {
+        method: "POST",
+        body: data
+    })
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById("views").innerHTML = text;
+        })
+}
+
 async function renderDialogues(dialogueName) {
     const currentDialogue = dialogues[dialogueName];
     if (dialogueName === "aloneness") {
@@ -279,12 +304,7 @@ async function clickOnEye() {
         eyeRage();
         window.addEventListener("click", async function clickOnBody() {
             window.open(
-                "https://example.com",
-                "_blank",
-                "width=600,height=400,resizable=yes"
-            );
-            window.open(
-                "https://wikipedia.org",
+                "https://youtu.be/O8aLzWU2JjQ",
                 "_blank",
                 "width=600,height=400,resizable=yes"
             );
