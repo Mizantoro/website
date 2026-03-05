@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background-color: #6b748c;
+}
+::selection {
+    color: white;
+    background-color: #6b748c;
+}
+* {
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+p {
+    font-size: 20px;
+    font-family: 'Ubuntu', monospace;
+}
+a {
+    color: white;
+}
+body {
+    background-image: url('../media/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+
+}
+#container {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin: 0 auto;
+    height: auto;
+    max-width: 800px;
+    width: 70%;
+    padding: 40px;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 60px;
+}
+#footer {
+    background: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 60px;
+}
+#footer_paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+}
