@@ -15,6 +15,9 @@
     color: var(--background-color);
     background-color: var(--text-color);
 }
+html {
+    scroll-behavior: smooth;
+}
 html body {
     margin: 0;
     background-color: var(--background-color);
@@ -211,6 +214,7 @@ button {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    z-index: 9999;
 }
 #eye_button_container {
     transition: 3s;
@@ -243,6 +247,43 @@ button {
 }
 #dialogue_text a {
     font-family: 'Special Elite', cursive;
+}
+#web_projects {
+    font-size: 40px;
+}
+.button_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    height: auto;
+    gap: 20px;
+    margin-top: 20px;
+}
+.button_container button {
+    width: 180px;
+    height: 50px;
+    border-width: 2px;
+    border-color: var(--text-color);
+    border-style: solid;
+    background: var(--background-color-higher);
+    border-radius: 40px;
+    font-size: 20px;
+    overflow: hidden;
+}
+.button_container button:hover {
+    width: 180px;
+    height: 50px;
+    border: none;
+    background: var(--text-color);
+    color: var(--background-color-higher);
+    border-radius: 40px;
+    font-size: 20px;
+    transition: 0.2s;
+    scale: 1.05;
+    box-shadow: 2px 2px 6px var(--text-color);
 }
 
 @keyframes xy-shaking {
