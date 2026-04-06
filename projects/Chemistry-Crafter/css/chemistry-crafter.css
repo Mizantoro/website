@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+::selection {
+    background: #37b634;
+    color: black;
+}
+::-moz-selection {
+    background: #37b634;
+    color: black;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    color: #37b634;
+}
+body {
+    background-color: #0b0b0b;
+}
+h1 {
+    text-align: center;
+    margin-top: 12px;
+}
+p {
+    text-align: center;
+    margin-top: 12px;
+}
+a {
+    color: #37b634;
+    font-size: 14px;
+}
+button {
+    cursor: pointer;
+}
+input {
+    outline: none;
+    background: none;
+    color: #37b634;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #37b634;
+    border-radius: 4px;
+    height: 30px;
+    text-align: center;
+}
+#button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+#button_container button {
+    background: none;
+    color: white;
+    padding: 8px;
+    border-style: solid;
+    border-color: #37b634;
+    border-radius: 12px;
+}
+#button_container button:hover {
+    background-color: #37b634;
+    color: black;
+}
+#button_container button:active {
+    background-color: white;
+}
+#string_container {
+    text-align: center;
+    margin-top: 12px;
+}
+#name_container {
+    text-align: center;
+    margin-top: 12px;
+}

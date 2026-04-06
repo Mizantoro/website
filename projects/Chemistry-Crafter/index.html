@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chemistry Crafter</title>
+    <link rel="stylesheet" href="css/chemistry-crafter.css">
+    <link rel="icon" href="media/pictures/Meta/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Chemistry Crafter</h1>
+<p>
+    Website by Mizantoro<br>
+    <a href="https://github.com/Mizantoro/website" target="_blank">Source Code</a>
+</p>
+
+<div id="string_container">CH4</div>
+<div id="name_container">methane</div>
+<div id="button_container">
+    <button onclick="addCarbon(); updateOutput(); updateName()">Add carbon</button>
+    <button onclick="removeCarbon(); updateOutput(); updateName()">Remove carbon</button>
+    <input id="input" type="number" min="1" max="100" value="1" onchange="updateOutput(); updateName()">
+    <button onclick="addSingleBound(); updateOutput(); updateName()">Single bond</button>
+    <button onclick="addDoubleBound(); updateOutput(); updateName()">Double bond</button>
+    <button onclick="addTripleBound(); updateOutput(); updateName()">Triple bond</button>
+    <button onclick="addOH(); updateOutput(); updateName()">Add OH</button>
+    <button onclick="addCHO(); updateOutput(); updateName()">Add CHO/CO</button>
+    <button onclick="addNH2(); updateOutput(); updateName()">Add NH2</button>
+    <button onclick="removeGroup(); updateOutput(); updateName()">Remove group</button>
+</div>
+<p>
+    This program may contain errors. It does not determine which end of the molecule is more important when naming it.
+</p>
+<script src="js/chemistry-crafter.js"></script>
+</body>
+</html>

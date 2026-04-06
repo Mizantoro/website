@@ -172,6 +172,9 @@ button {
 #pendulum_project:hover {
     box-shadow: 4px 4px 12px #574134;
 }
+#chemistry_project:hover {
+    box-shadow: 4px 4px 12px #37b634;
+}
 #social_media {
     display: flex;
     flex-direction: column;
