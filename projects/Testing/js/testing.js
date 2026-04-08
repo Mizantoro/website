@@ -40,7 +40,7 @@ window.onload = function() {
         if (time === 3) {
             await delay(141);
             document.body.style.color = "white";
-            document.body.style.backgroundImage = "url('projects/Testing/media/pi.jpg')";
+            document.body.style.backgroundImage = "url('media/pi.jpg')";
         }
         if (time === 4) {
             document.body.style.backgroundImage = "none";
@@ -48,7 +48,7 @@ window.onload = function() {
         }
         if (time === 420) {
             document.body.style.color = "white";
-            document.body.style.backgroundImage = "url('projects/Testing/media/mar.jpg')";
+            document.body.style.backgroundImage = "url('media/mar.jpg')";
         }
         if (time === 421) {
             document.body.style.backgroundImage = "none";
