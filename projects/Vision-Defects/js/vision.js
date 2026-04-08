@@ -1,20 +1,20 @@
 const imagesToPreload = [
-    'projects/Vision-Defects/media/astigmatism.jpg',
-    'projects/Vision-Defects/media/cataract.jpg',
-    'projects/Vision-Defects/media/clear.jpg',
-    'projects/Vision-Defects/media/glaucoma.jpg',
-    'projects/Vision-Defects/media/hyperopia.jpg',
-    'projects/Vision-Defects/media/macular_degeneration.jpg',
-    'projects/Vision-Defects/media/myopia.jpg',
-    'projects/Vision-Defects/media/retinopathy1.jpg',
-    'projects/Vision-Defects/media/retinopathy2.jpg',
-    'projects/Vision-Defects/media/visibility.svg'
+    'media/astigmatism.jpg',
+    'media/cataract.jpg',
+    'media/clear.jpg',
+    'media/glaucoma.jpg',
+    'media/hyperopia.jpg',
+    'media/macular_degeneration.jpg',
+    'media/myopia.jpg',
+    'media/retinopathy1.jpg',
+    'media/retinopathy2.jpg',
+    'media/visibility.svg'
 ];
 
 async function changeImage(img) {
     document.querySelector('h1').style.opacity = 0;
     document.querySelector('a').style.opacity = 0;
-    document.body.style.backgroundImage = "url('media/pictures/vision/" + img + "')";
+    document.body.style.backgroundImage = "url('media/" + img + "')";
 }
 
 window.onload = function preloadImages() {
