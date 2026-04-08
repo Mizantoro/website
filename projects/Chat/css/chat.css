@@ -105,3 +105,9 @@ input::placeholder {
 #title * {
     margin: 2px;
 }
+
+@media(max-width: 800px) {
+    #chat, #choose_nickname, #title, #send_message {
+        width: 94%;
+    }
+}
