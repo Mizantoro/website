@@ -215,8 +215,8 @@ async function changeColor(color, target) {
 		getComputedStyle(root).getPropertyValue('--wallpaper-color').trim() === 'deeppink' &&
 		getComputedStyle(root).getPropertyValue('--accent-color').trim() === 'deeppink'
 	) {
-		document.body.style.backgroundImage = 'url("media/pictures/anime/anime-background.jpg")';
-		document.getElementById('profile_picture').src = 'media/pictures/anime/anime-profile.png';
+		document.body.style.backgroundImage = 'url("media/anime/anime-background.jpg")';
+		document.getElementById('profile_picture').src = 'media/anime/anime-profile.png';
 		document.getElementById('profile_idiot_text').innerHTML = 'UwU';
 	}
 }
