@@ -5,7 +5,7 @@ function start() {
     document.body.style.cursor = "none";
     document.getElementById("E_image").style.cursor = "none";
     document.getElementById("container").style.display = "none";
-    document.body.style.backgroundImage = "url(projects/E/media/E.jpg)";
+    document.body.style.backgroundImage = "url(media/E.jpg)";
 
     document.documentElement.requestFullscreen();
     keepPlayingE();
@@ -39,7 +39,7 @@ function start() {
 }
 
 async function playE() {
-    const audio = new Audio("projects/E/media/e.mp3");
+    const audio = new Audio("media/e.mp3");
     audio.play();
 }
 
@@ -54,7 +54,7 @@ function openWindowE() {
     const top = Math.random() * (window.screen.availHeight - 360);
     const left = Math.random() * (window.screen.availWidth - 640);
     window.open(
-        "projects/E/media/E.jpg",
+        "media/E.jpg",
         windowName,
         "width=640,height=360,top=" + top + ",left=" + left + ",resizable=yes,scrollbars=yes"
     );
@@ -82,8 +82,8 @@ window.addEventListener('keydown', function (e) {
 function downloadURI()
 {
     var link = document.createElement("a");
-    link.download = "projects/E/media/E.jpg";
-    link.href = "projects/E/media/E.jpg";
+    link.download = "media/E.jpg";
+    link.href = "media/E.jpg";
     link.click();
 }
 
