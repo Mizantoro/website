@@ -177,6 +177,29 @@ let dialogues = {
         ]
     }
 };
+let TerminalText = "";
+let views = "";
+const TerminalOutput = document.getElementById("terminal_output");
+const projects = [
+    "Depressing-Stats",
+    "Testing",
+    "Secret",
+    "Space-Stats",
+    "Vision-Defects",
+    "Vinyl-Player",
+    "Elements-Crafter",
+    "Red-Blue",
+    "Russian-Roulette",
+    "Biology-Crafter",
+    "Chat",
+    "Wide-Game",
+    "E",
+    "Redact",
+    "Pendulum",
+    "Chemistry-Crafter",
+    "Generator-Wypowiedzi-JKM",
+    "Generator-Wypowiedzi-Janusza-Kowalskiego"
+];
 
 async function setDefaultTheme() {
     document.getElementById("mizantoro_net").innerHTML = "mizantoro.net";
@@ -187,6 +210,10 @@ async function setDefaultTheme() {
         el.style.fontFamily = "'Lexend', sans-serif";
     });
     document.getElementById("dialogue_text").style.fontFamily = "'Special Elite', cursive";
+    const allElementsTerminal = document.getElementById("terminal_container").querySelectorAll("*");
+    allElementsTerminal.forEach(el => {
+        el.style.fontFamily = "'consolas', monospace";
+    })
 }
 
 async function switchTheme() {
@@ -210,7 +237,7 @@ async function specialTheme() {
     const root = document.documentElement;
     root.style.setProperty('--background-color', '#3e4637');
     root.style.setProperty('--background-color-higher', '#4c5844');
-    root.style.setProperty('--text-color', '#fff');
+    root.style.setProperty('--text-color', '#dfbd38');
     document.getElementById("welcome").style.backgroundImage="none";
     document.getElementById("welcome").style.backgroundColor="#4c5844";
     const allElements = document.querySelectorAll("*");
@@ -242,7 +269,10 @@ window.onload = async function () {
         .then(response => response.text())
         .then(text => {
             document.getElementById("views").innerHTML = text;
+            views = text;
         })
+
+    loadWelcomeTerminalMessage();
 }
 
 async function renderDialogues(dialogueName) {
@@ -415,4 +445,125 @@ async function eyeHacked() {
     await delay(400);
     renderDialogues("start");
     eye.style.animation = "";
+}
+
+function toggleDiv(id) {
+    let div = document.getElementById(id);
+    let displayValue = window.getComputedStyle(div, null).display; // https://stackoverflow.com/questions/4866229/check-element-css-display-with-javascript
+    if (displayValue === "none") {
+        div.style.display = "flex";
+    }
+    else {
+        div.style.display = "none";
+    }
+}
+
+// Terminal
+const commands = [
+    "help",
+    "clear",
+    "close",
+    "switch theme",
+    "special theme",
+    "eye rage",
+    "refresh",
+    "views",
+    "project",
+    "minecraft",
+    "cloud"
+];
+const projectCommands = [
+    "list",
+    "open",
+    "help"
+]
+
+document.getElementById("terminal_input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        handleCommand(this.value);
+        document.getElementById("terminal_input").value = "";
+    }
+});
+
+function loadWelcomeTerminalMessage() {
+    TerminalText += "Welcome to mizanoro.net terminal!<br>Use `help` to see the command list.";
+    displayTerminalText();
+}
+
+function handleCommand(cmd) {
+    if (cmd.trim().split(/\s+/)[0] === "project") {
+        const second = cmd.trim().split(/\s+/)[1];
+        switch (second) {
+            case "list":
+                for (let i = 0; i < projects.length; i++) {
+                    TerminalText += projects[i] + "<br>";
+                }
+                break;
+            case "open":
+                const project = cmd.trim().split(/\s+/)[2];
+                if (!projects.includes(project)) {
+                    TerminalText += "Unknown project `" + project + "`! Run `project list` for available projects.";
+                    displayTerminalText();
+                    return;
+                }
+                window.open("projects/" + project + '/index.html');
+                break;
+            case "help":
+                for (let i = 0; i < projectCommands.length; i++) {
+                    TerminalText += projectCommands[i] + "<br>";
+                }
+                break;
+            default:
+                TerminalText += "Unknown `project` command! Use `project help` for the project command list.";
+        }
+    }
+    else {
+        switch(cmd) {
+            case "help":
+                for (let i = 0; i < commands.length; i++) {
+                    TerminalText += commands[i] + "<br>";
+                }
+                break;
+            case "clear":
+                clearTerminalText()
+                break;
+            case "close":
+                toggleDiv("terminal_container");
+                return;
+            case "switch theme":
+                switchTheme();
+                break;
+            case "special theme":
+                specialTheme();
+                break;
+            case "eye rage":
+                eyeRage();
+                break;
+            case "refresh":
+                location.reload();
+                break;
+            case "views":
+                TerminalText += views;
+                break;
+            case "minecraft":
+                window.open("Minecraft/index.html");
+                break;
+            case "cloud":
+                window.open("https://cloud.mizantoro.net");
+                break;
+            default:
+                TerminalText += "Unknown command `" + cmd + "`! Use `help` for the command list.";
+        }
+    }
+
+    displayTerminalText();
+}
+
+function clearTerminalText() {
+    TerminalText = "";
+}
+
+function displayTerminalText() {
+    TerminalText += "<br>";
+    TerminalOutput.innerHTML = TerminalText;
 }

@@ -7,10 +7,19 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<!-- TERMINAL -->
+<div id="terminal_container">
+    <div id="terminal">
+        <div id="terminal_output"></div>
+        <input type="text" autofocus id="terminal_input">
+    </div>
+</div>
+
 <!-- TITLE -->
 <div id="welcome">
     <button id="theme_toggle" onclick="switchTheme()"><img id="theme_toggle_img" src="media/pictures/index/ico/day.svg"></button>
     <button id="special_theme_toggle" onclick="specialTheme()"><img id="special_theme_img" src="media/pictures/index/ico/special.svg"></button>
+    <button id="terminal_toggle" onclick="toggleDiv('terminal_container')"><img src="media/pictures/index/ico/terminal.svg"></button>
     <h1 id="mizantoro_net">mizantoro.net</h1>
     <h2>Projects by Mizantoro</h2>
     <h3 id="views">error: missing date</h3>

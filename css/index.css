@@ -97,6 +97,16 @@ button {
     right: 60px;
     top: 10px;
 }
+#terminal_toggle {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
 .project_tile {
     height: 200px;
     width: 400px;
@@ -217,7 +227,7 @@ button {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    z-index: 9999;
+    z-index: 1;
 }
 #eye_button_container {
     transition: 3s;
@@ -287,6 +297,48 @@ button {
     transition: 0.2s;
     scale: 1.05;
     box-shadow: 2px 2px 6px var(--text-color);
+}
+#terminal_container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#terminal {
+    width: 98%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    background: var(--background-color-higher);
+    border-color: var(--text-color);
+    border-style: solid;
+    border-width: 2px;
+    z-index: 2;
+    border-radius: 15px;
+}
+#terminal * {
+    font-family: 'consolas', monospace;
+}
+#terminal input {
+    height: 20px;
+    width: 100%;
+    border: none;
+    padding-left: min(20px, 98%);
+    background-color: var(--background-color);
+}
+#terminal input:focus {
+    outline: none;
+}
+#terminal_output {
+    width: 100%;
+    height: calc(100% - 20px);
+    background-color: var(--background-color-higher);
+    padding-left: min(20px, 98%);
 }
 
 @keyframes xy-shaking {
