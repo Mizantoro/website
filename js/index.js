@@ -137,7 +137,7 @@ let dialogues = {
             Ahh... so you seek the knowledge of the essence of laws of nature.
             You have to agree that homo sapiens are really fatuous. So many years
             of civilization but you understand so little...
-            You can start your journey of understanding <a href="elements-crafter.html" target="_blank">here</a>.
+            You can start your journey of understanding <a href="projects/Elements-Crafter/index.html" target="_blank">here</a>.
         `,
         options: [
             { text: "Go home", next: "start" }
