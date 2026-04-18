@@ -273,6 +273,10 @@ window.onload = async function () {
         })
 
     loadWelcomeTerminalMessage();
+
+    if (Math.floor(Math.random() * 20) === 0) {
+        toggleDiv("captcha_container");
+    }
 }
 
 async function renderDialogues(dialogueName) {
@@ -470,7 +474,8 @@ const commands = [
     "views",
     "project",
     "minecraft",
-    "cloud"
+    "cloud",
+    "captcha"
 ];
 const projectCommands = [
     "list",
@@ -551,6 +556,9 @@ function handleCommand(cmd) {
             case "cloud":
                 window.open("https://cloud.mizantoro.net");
                 break;
+            case "captcha":
+                toggleDiv("captcha_container");
+                break;
             default:
                 TerminalText += "Unknown command `" + cmd + "`! Use `help` for the command list.";
         }
@@ -566,4 +574,39 @@ function clearTerminalText() {
 function displayTerminalText() {
     TerminalText += "<br>";
     TerminalOutput.innerHTML = TerminalText;
+}
+
+// Captcha
+let captchaArr = Array(9).fill(false);
+
+function captchaClick(n) {
+    if (captchaArr[n] === false) {
+        document.getElementById("captcha_" + n.toString()).style.transform = "scale(0.9)";
+        captchaArr[n] = true;
+    }
+    else {
+        document.getElementById("captcha_" + n.toString()).style.transform = "scale(1)";
+        captchaArr[n] = false;
+    }
+
+    if (
+        captchaArr[1] === false &&
+        captchaArr[2] === true  &&
+        captchaArr[3] === true  &&
+        captchaArr[4] === true  &&
+        captchaArr[5] === true  &&
+        captchaArr[6] === true  &&
+        captchaArr[7] === true  &&
+        captchaArr[8] === true  &&
+        captchaArr[9] === true
+    ) {
+        document.getElementById("captcha_container").style.display = "none";
+    }
+}
+
+function captchaReset() {
+    for (let i = 1; i < captchaArr.length; i++) {
+        captchaArr[i] = false;
+        document.getElementById("captcha_" + i.toString()).style.transform = "scale(1)";
+    }
 }
