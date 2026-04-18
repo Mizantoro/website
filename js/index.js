@@ -180,26 +180,6 @@ let dialogues = {
 let TerminalText = "";
 let views = "";
 const TerminalOutput = document.getElementById("terminal_output");
-const projects = [
-    "Depressing-Stats",
-    "Testing",
-    "Secret",
-    "Space-Stats",
-    "Vision-Defects",
-    "Vinyl-Player",
-    "Elements-Crafter",
-    "Red-Blue",
-    "Russian-Roulette",
-    "Biology-Crafter",
-    "Chat",
-    "Wide-Game",
-    "E",
-    "Redact",
-    "Pendulum",
-    "Chemistry-Crafter",
-    "Generator-Wypowiedzi-JKM",
-    "Generator-Wypowiedzi-Janusza-Kowalskiego"
-];
 
 async function setDefaultTheme() {
     document.getElementById("mizantoro_net").innerHTML = "mizantoro.net";
@@ -475,6 +455,7 @@ const commands = [
     "project",
     "minecraft",
     "cloud",
+    "dov",
     "captcha"
 ];
 const projectCommands = [
@@ -482,6 +463,27 @@ const projectCommands = [
     "open",
     "help"
 ]
+const projects = [
+    "MizantOS",
+    "Depressing-Stats",
+    "Testing",
+    "Secret",
+    "Space-Stats",
+    "Vision-Defects",
+    "Vinyl-Player",
+    "Elements-Crafter",
+    "Red-Blue",
+    "Russian-Roulette",
+    "Biology-Crafter",
+    "Chat",
+    "Wide-Game",
+    "E",
+    "Redact",
+    "Pendulum",
+    "Chemistry-Crafter",
+    "Generator-Wypowiedzi-JKM",
+    "Generator-Wypowiedzi-Janusza-Kowalskiego"
+];
 
 document.getElementById("terminal_input").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -556,6 +558,9 @@ function handleCommand(cmd) {
             case "cloud":
                 window.open("https://cloud.mizantoro.net");
                 break;
+            case "dov":
+                window.open("Declaration-of-Values/index.html");
+                break;
             case "captcha":
                 toggleDiv("captcha_container");
                 break;
@@ -574,6 +579,8 @@ function clearTerminalText() {
 function displayTerminalText() {
     TerminalText += "<br>";
     TerminalOutput.innerHTML = TerminalText;
+    // Scroll to the bottom
+    TerminalOutput.scrollTop = TerminalOutput.scrollHeight;
 }
 
 // Captcha
