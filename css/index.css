@@ -274,9 +274,10 @@ button {
     height: auto;
     gap: 20px;
     margin-top: 20px;
+    padding: 12px;
 }
 .button_container button {
-    width: 180px;
+    width: 200px;
     height: 50px;
     border-width: 2px;
     border-color: var(--text-color);
@@ -287,8 +288,6 @@ button {
     overflow: hidden;
 }
 .button_container button:hover {
-    width: 180px;
-    height: 50px;
     border: none;
     background: var(--text-color);
     color: var(--background-color-higher);
