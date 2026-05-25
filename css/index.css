@@ -32,6 +32,7 @@ body {
 }
 a {
     cursor: pointer;
+    color: var(--text-color);
 }
 p {
     font-size: 30px;
@@ -74,7 +75,9 @@ button {
     margin-bottom: 10px;
     color: white;
 }
-#welcome h3, h4, a {
+#welcome h3,
+#welcome h4,
+#welcome a {
     color: white;
 }
 #theme_toggle {

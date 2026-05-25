@@ -203,6 +203,7 @@ async function switchTheme() {
         root.style.setProperty('--background-color', '#FFFAFA');
         root.style.setProperty('--background-color-higher', '#ededed');
         root.style.setProperty('--text-color', 'black');
+
         document.getElementById("theme_toggle_img").src="media/pictures/index/ico/night.svg";
     }
     else {
@@ -256,6 +257,14 @@ window.onload = async function () {
 
     if (Math.floor(Math.random() * 20) === 0) {
         toggleDiv("captcha_container");
+    }
+
+
+// Source - https://stackoverflow.com/a/57795518
+// Posted by Mark Szabo, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-05-25, License - CC BY-SA 4.0
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        switchTheme();
     }
 }
 
