@@ -117,8 +117,11 @@ button {
 .welcome_buttons_container:hover {
     font-size: 20px;
     transition: 0.2s;
-    scale: 1.05;
+    transform: scale(1.05);
     box-shadow: 2px 2px 6px #090909;
+}
+.welcome_buttons_container:active {
+    transform: scale(1);
 }
 #terminal_toggle {
     width: 40px;
@@ -147,6 +150,9 @@ button {
 .project_tile:hover {
     box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.34);
     transform: scale(1.05);
+}
+.project_tile:active {
+    transform: scale(1);
 }
 #mizantos_project:hover {
     box-shadow: 4px 4px 12px rgb(124, 17, 8);
@@ -316,6 +322,9 @@ button {
     transition: 0.2s;
     scale: 1.05;
     box-shadow: 2px 2px 6px var(--text-color);
+}
+.button_container button:active {
+    scale: 1;
 }
 #terminal_container {
     display: none;
