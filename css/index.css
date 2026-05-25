@@ -80,25 +80,45 @@ button {
 #welcome a {
     color: white;
 }
-#theme_toggle {
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
+.welcome_buttons_container {
+    display: flex;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    background-color: #090909;
+    align-items: center;
+    padding: 4px;
+    border-radius: 40px;
+    border-width: 2px;
+    border-color: var(--text-no-change);
+    border-style: solid;
+
+}
+#welcome_buttons_right {
     position: fixed;
     right: 10px;
     top: 10px;
 }
-#special_theme_toggle {
+#welcome_buttons_left {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+.welcome_buttons_container button {
     width: 40px;
     height: 40px;
     background: none;
     border: none;
     cursor: pointer;
-    position: fixed;
-    right: 60px;
-    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome_buttons_container:hover {
+    font-size: 20px;
+    transition: 0.2s;
+    scale: 1.05;
+    box-shadow: 2px 2px 6px #090909;
 }
 #terminal_toggle {
     width: 40px;
@@ -106,9 +126,6 @@ button {
     background: none;
     border: none;
     cursor: pointer;
-    position: fixed;
-    left: 10px;
-    top: 10px;
 }
 .project_tile {
     height: 200px;
@@ -125,7 +142,7 @@ button {
     overflow: hidden;
     border-width: 2px;
     border-style: solid;
-    border-color: black;
+    border-color: var(--text-color);
 }
 .project_tile:hover {
     box-shadow: 4px 4px 12px rgba(255, 255, 255, 0.34);

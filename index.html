@@ -43,9 +43,13 @@
 
 <!-- TITLE -->
 <div id="welcome">
-    <button id="theme_toggle" onclick="switchTheme()"><img id="theme_toggle_img" src="media/pictures/index/ico/day.svg"></button>
-    <button id="special_theme_toggle" onclick="specialTheme()"><img id="special_theme_img" src="media/pictures/index/ico/special.svg"></button>
-    <button id="terminal_toggle" onclick="toggleDiv('terminal_container')"><img src="media/pictures/index/ico/terminal.svg"></button>
+    <div class="welcome_buttons_container" id="welcome_buttons_right">
+        <button id="special_theme_toggle" onclick="specialTheme()"><img id="special_theme_img" src="media/pictures/index/ico/special.svg"></button>
+        <button id="theme_toggle" onclick="switchTheme()"><img id="theme_toggle_img" src="media/pictures/index/ico/day.svg"></button>
+    </div>
+    <div class="welcome_buttons_container" id="welcome_buttons_left">
+        <button id="terminal_toggle" onclick="toggleDiv('terminal_container')"><img src="media/pictures/index/ico/terminal.svg"></button>
+    </div>
     <h1 id="mizantoro_net">mizantoro.net</h1>
     <h2>Projects by Mizantoro</h2>
     <h3 id="views">error: missing date</h3>
