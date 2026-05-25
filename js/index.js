@@ -456,7 +456,8 @@ const commands = [
     "minecraft",
     "cloud",
     "dov",
-    "captcha"
+    "captcha",
+    "download-center"
 ];
 const projectCommands = [
     "list",
@@ -563,6 +564,9 @@ function handleCommand(cmd) {
                 break;
             case "captcha":
                 toggleDiv("captcha_container");
+                break;
+            case "download-center":
+                window.open("Download-Center/index.html");
                 break;
             default:
                 TerminalText += "Unknown command `" + cmd + "`! Use `help` for the command list.";
