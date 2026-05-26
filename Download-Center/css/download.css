@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');@font-face {
     font-family: 'Minecraft_bold';
     font-weight: normal;
     font-style: normal;
@@ -58,6 +56,7 @@ li {
 }
 button {
     cursor: pointer;
+    user-select: none;
 }
 #welcome {
     background-color: var(--background-color-higher);
@@ -152,6 +151,8 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
+    width: 100%;
 }
 #android_button {
     border-color: #3DDC84;
@@ -162,6 +163,15 @@ button {
 }
 #android_tile .tile {
     border: 2px solid #3DDC84;
+}
+#android_tile .tile a:hover {
+    color: #3DDC84;
+}
+#android_tile .tile ::selection {
+    background-color: #3DDC84;
+}
+#android_tile .tile ::-moz-selection {
+    background-color: #3DDC84;
 }
 #android_tile .tile {
     border: 2px solid #3DDC84;
@@ -176,6 +186,15 @@ button {
 #linux_tile .tile {
     border: 2px solid #E95420;
 }
+#linux_tile .tile a:hover {
+    color: #E95420;
+}
+#linux_tile .tile ::selection {
+    background-color: #E95420;
+}
+#linux_tile .tile ::-moz-selection {
+    background-color: #E95420;
+}
 #windows_button {
     border-color: #0078D4;
 }
@@ -185,6 +204,15 @@ button {
 }
 #windows_tile .tile {
     border: 2px solid #0078D4;
+}
+#windows_tile .tile a:hover {
+    color: #0078D4;
+}
+#windows_tile .tile ::selection {
+    background-color: #0078D4;
+}
+#windows_tile .tile ::-moz-selection {
+    background-color: #0078D4;
 }
 
 #footer {
@@ -205,3 +233,16 @@ button {
     font-size: 30px;
 }
 
+@media(max-width: 600px) {
+    h1 {
+        font-size: 30px;
+        margin: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .tile {
+        width: 80%;
+        height: 200px;
+    }
+}
