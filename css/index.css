@@ -473,10 +473,29 @@ button {
         margin-right: 2%;
     }
     h1 {
-        font-size: 52px;
+        font-size: 30px;
+        margin: 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    #welcome {
+        padding-top: 70px;
     }
     .project_tile {
-        width: 98%;
+        width: 90%;
+        height: 170px;
+    }
+    .project_tile img {
+        height: 110%;
+        object-fit: cover;
+    }
+    .button_container button {
+        width: 150px;
+        font-size: 15px;
     }
     #captcha_images_container {
         grid-template-columns: repeat(3, 100px);
