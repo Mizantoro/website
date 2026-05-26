@@ -51,6 +51,7 @@ img {
 }
 button {
     cursor: pointer;
+    user-select: none;
 }
 #welcome {
     /*background-color: var(--background-color-higher);*/
