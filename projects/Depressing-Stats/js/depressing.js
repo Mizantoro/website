@@ -49,7 +49,7 @@ window.onload = async function() {
         while(true) {
             document.getElementById("starve").innerHTML = starve + " starved.";
             starve++;
-            await delay(3500);
+            await delay(149000);
         }
     }
 
@@ -58,7 +58,7 @@ window.onload = async function() {
         while(true) {
             document.getElementById("car").innerHTML = car + " crashed.";
             car++;
-            await delay(26000);
+            await delay(26500);
         }
     }
 
@@ -67,7 +67,7 @@ window.onload = async function() {
         while(true) {
             document.getElementById("war").innerHTML = war + " fell.";
             war++;
-            await delay(133000);
+            await delay(131400);
         }
     }
 
@@ -75,8 +75,8 @@ window.onload = async function() {
     async function countTree() {
         while(true) {
             document.getElementById("tree").innerHTML = tree + " m^2 deforested.";
-            tree += 453; // divided  by 7
-            await delay(143); // 1000 / 7 = 142.8571
+            tree += 432;
+            await delay(125);
         }
     }
 
@@ -85,7 +85,7 @@ window.onload = async function() {
         while(true) {
             document.getElementById("plastics").innerHTML = plastics + " kg dumped.";
             plastics++;
-            await delay(2867);
+            await delay(4);
         }
     }
 
@@ -106,5 +106,5 @@ window.onload = async function() {
     countWar();
     countTree();
     countPlastics();
-    countExtinct()
+    countExtinct();
 }

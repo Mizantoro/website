@@ -49,6 +49,9 @@ body {
     overflow: hidden;
     margin-top: 60px;
 }
+#container a {
+    text-decoration: none;
+}
 #footer {
     background: rgba(0, 0, 0, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
