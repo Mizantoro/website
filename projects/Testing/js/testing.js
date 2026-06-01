@@ -1,5 +1,17 @@
 const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
 
+const imagesToPreload = [
+    'media/pi.jpg',
+    'media/mar.jpg'
+];
+
+window.onload = function preloadImages() {
+    imagesToPreload.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
 window.onload = function() {
     let time = 0;
     let hovered = false;
@@ -9,7 +21,8 @@ window.onload = function() {
     function updateText() {
         if (hovered) {
             testingEl.innerHTML = "I have been testing your patience for " + time + " seconds.";
-        } else {
+        }
+        else {
             testingEl.innerHTML = "You have been testing for " + time + " seconds.";
         }
     }
