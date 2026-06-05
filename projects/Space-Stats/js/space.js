@@ -44,8 +44,8 @@ window.onload = async function() {
     async function countSupernova() {
         while(true) {
             document.getElementById("supernova").innerHTML = supernova.toLocaleString() + " bangs.";
-            supernova+=173;
-            await delay(91);
+            supernova+=9;
+            await delay(50);
         }
     }
 
