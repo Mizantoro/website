@@ -1,4 +1,22 @@
+const delay = ms => new Promise(res => setTimeout(res, ms)); // https://stackoverflow.com/questions/14226803/wait-5-seconds-before-executing-next-line
+
+const firstElement = document.getElementById("first");
+const secondElement = document.getElementById("second");
+const thirdElement = document.getElementById("third");
+const fourthElement = document.getElementById("fourth");
+const fifthElement = document.getElementById("fifth");
+const sixthElement = document.getElementById("sixth");
+
+const fajajaja = document.getElementById("audio");
+
 async function generate() {
+    firstElement.innerHTML = "";
+    secondElement.innerHTML = "";
+    thirdElement.innerHTML = "";
+    fourthElement.innerHTML = "";
+    fifthElement.innerHTML = "";
+    sixthElement.innerHTML = "";
+
     let First = [
         "Proszę zwrócić uwagę, że",
         "I tak mam trzy razy mniej czasu, więc proszę mi pozwolić powiedzieć:",
@@ -144,10 +162,84 @@ async function generate() {
         "proszę zobaczyć co się dzieje na Zachodzie, jeśli mi państwo nie wierzą.",
         "co sto lat temu nikomu nie przyszłoby nawet do głowy",
     ];
-    document.getElementById("first").innerHTML = First[Math.floor(Math.random() * 22)];
-    document.getElementById("second").innerHTML = "&nbsp;" + Second[Math.floor(Math.random() * 22)];
-    document.getElementById("third").innerHTML = "&nbsp;" + Third[Math.floor(Math.random() * 22)];
-    document.getElementById("fourth").innerHTML = "&nbsp;" + Fourth[Math.floor(Math.random() * 22)];
-    document.getElementById("fifth").innerHTML = "&nbsp;" + Fifth[Math.floor(Math.random() * 22)];
-    document.getElementById("sixth").innerHTML = "&nbsp;" + Sixth[Math.floor(Math.random() * 22)];
+    // document.getElementById("first").innerHTML = First[Math.floor(Math.random() * First.length)];
+    // document.getElementById("second").innerHTML = "&nbsp;" + Second[Math.floor(Math.random() * Second.length)];
+    // document.getElementById("third").innerHTML = "&nbsp;" + Third[Math.floor(Math.random() * Third.length)];
+    // document.getElementById("fourth").innerHTML = "&nbsp;" + Fourth[Math.floor(Math.random() * Fourth.length)];
+    // document.getElementById("fifth").innerHTML = "&nbsp;" + Fifth[Math.floor(Math.random() * Fifth.length)];
+    // document.getElementById("sixth").innerHTML = "&nbsp;" + Sixth[Math.floor(Math.random() * Sixth.length)];
+
+    let first = First[Math.floor(Math.random() * First.length)];
+    let second = Second[Math.floor(Math.random() * Second.length)];
+    let third = Third[Math.floor(Math.random() * Third.length)];
+    let fourth = Fourth[Math.floor(Math.random() * Fourth.length)];
+    let fifth = Fifth[Math.floor(Math.random() * Fifth.length)];
+    let sixth = Sixth[Math.floor(Math.random() * Sixth.length)];
+
+    let totalLength =  first.length +
+                                second.length +
+                                third.length +
+                                fourth.length +
+                                fifth.length +
+                                sixth.length;
+
+    let pause = 2600 / totalLength;
+    let str = "";
+
+    fajajaja.play();
+
+    await delay(200);
+
+    first = first + "&nbsp;";
+
+    for (let i = 0; i < first.length; i++) {
+        str = str + first[i];
+        firstElement.innerHTML = str;
+        await delay (pause);
+    }
+
+    str = "";
+    second = second + "&nbsp;";
+
+    for (let i = 0; i < second.length; i++) {
+        str = str + second[i];
+        secondElement.innerHTML = str;
+        await delay (pause);
+    }
+
+    str = "";
+    third = third + "&nbsp;";
+
+    for (let i = 0; i < third.length; i++) {
+        str = str + third[i];
+        thirdElement.innerHTML = str;
+        await delay (pause);
+    }
+
+    str = "";
+    fourth = fourth + "&nbsp;";
+
+    for (let i = 0; i < fourth.length; i++) {
+        str = str + fourth[i];
+        fourthElement.innerHTML = str;
+        await delay (pause);
+    }
+
+    str = "";
+    fifth = fifth + "&nbsp;";
+
+    for (let i = 0; i < fifth.length; i++) {
+        str = str + fifth[i];
+        fifthElement.innerHTML = str;
+        await delay (pause);
+    }
+
+    str = "";
+    sixth = sixth + "&nbsp;";
+
+    for (let i = 0; i < sixth.length; i++) {
+        str = str + sixth[i];
+        sixthElement.innerHTML = str;
+        await delay (pause);
+    }
 }
