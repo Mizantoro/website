@@ -7,6 +7,16 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<!-- AWAY -->
+<div id="away_hider">
+    <div id="away_timer"></div>
+    <div id="away_eye_container">
+        <p id="away_dialogue_text"></p>
+        <div id="away_eye_button_container"></div>
+        <img id="away_eye" src="media/pictures/index/eye/eye.svg" alt="Away Eye" onclick="clickOnEye()">
+    </div>
+</div>
+
 <!-- TERMINAL -->
 <div id="terminal_container">
     <div id="terminal">
@@ -153,10 +163,11 @@
     </p>
 </div>
 
+<!-- EYE -->
 <div id="eye_container">
     <p id="dialogue_text"></p>
     <div id="eye_button_container"></div>
-    <img id="eye" src="media/pictures/index/eye/eye.svg" alt="Testing project" onclick="clickOnEye()">
+    <img id="eye" src="media/pictures/index/eye/eye.svg" alt="Eye" onclick="clickOnEye()">
 </div>
 
 <!-- FOOTER -->
@@ -167,5 +178,6 @@
     <a href="https://github.com/Mizantoro/website" target="_blank">Source code</a>
 </div>
 <script src="js/index.js"></script>
+<script src="js/away.js"></script>
 </body>
 </html>

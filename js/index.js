@@ -342,6 +342,7 @@ async function eyeRage() {
     const elements = document.querySelectorAll("p, a, h1, h2, h3, h4, h5, h6, img, button, span");
     const buttonContainer = document.getElementById("eye_button_container");
 
+    showEverything();
     buttonContainer.innerHTML = "";
     eyeText.style.display = "none";
     eyeContainer.style.transition = "2s";
