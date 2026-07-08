@@ -257,7 +257,6 @@ async function resetTimer() {
 
 // Define the events that
 // would reset the timer
-window.onload = resetTimer;
 window.onmousemove = resetTimer;
 window.onmousedown = resetTimer;
 window.ontouchstart = resetTimer;
