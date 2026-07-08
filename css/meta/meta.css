@@ -1,0 +1,62 @@
+/*
+    This file contains meta styles for every non-project page.
+    As for now this file is used only by 'me' page.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+:root {
+    --background-color: #090909;
+    --background-color-higher: #121212;
+    --text-color: #fff;
+    --text-no-change: #fff;
+}
+::-moz-selection { /* Code for Firefox */
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+::selection {
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+html {
+    scroll-behavior: smooth;
+}
+html body {
+    margin: 0;
+    background-color: var(--background-color);
+}
+body {
+    overflow-x: hidden;
+}
+* {
+    font-family: 'Lexend', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+a {
+    cursor: pointer;
+    color: var(--text-color);
+}
+p {
+    font-size: 30px;
+}
+h1 {
+    font-size: 60px;
+    margin-top: 10px;
+}
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+img {
+    border-radius: 38px;
+}
+button {
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
