@@ -240,6 +240,8 @@ window.addEventListener("scroll", async function scroll() {
 });
 
 window.onload = async function () {
+    keepCallingGaben();
+
     const data = new FormData();
     data.append("views", "1");
     fetch("php/index.php", {
@@ -628,5 +630,15 @@ function captchaReset() {
     for (let i = 1; i < captchaArr.length; i++) {
         captchaArr[i] = false;
         document.getElementById("captcha_" + i.toString()).style.transform = "scale(1)";
+    }
+}
+
+// Call GABEN
+
+async function keepCallingGaben() {
+    callGaben();
+    while(true) {
+        await delay (30000);
+            callGaben();
     }
 }
